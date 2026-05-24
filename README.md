@@ -1,2 +1,1 @@
-# WATGame
-Textbasiertes Ressourcen-Game mit Flatfile-System
+Planungen mit Grok für CJ, Josie und KI
