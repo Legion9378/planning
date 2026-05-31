@@ -1,1 +1,1 @@
-Planungen mit Grok für CJ, Josie und KI
+# Planungen für CJ, Josie und Daphne als Lokale KIs
