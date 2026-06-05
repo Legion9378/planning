@@ -38,7 +38,7 @@ Sie ist keine Architekturentscheidung. Einzelne Tools und Artikel muessen separa
 - Repo-/Job-Abschlusskopien:
   - `How I Set Up My Repo So AI Can Write and Review 100% of My Code` - verarbeitet als Guardrails-/Policy-Gate-Pattern; keine 100-Prozent-Autonomie.
 - Uebersetzungs-Worker:
-  - `The Open-Source DeepL Alternative Is Here`
+  - `The Open-Source DeepL Alternative Is Here` - verarbeitet als Translation-Worker-Kandidat; HY-MT1.5-1.8B/7B spaeter testen.
 - Validator-Idee:
   - TMR/Samsung-7M nur pruefen, falls ein real nutzbarer Download und belastbare Quellen verfuegbar sind.
 
