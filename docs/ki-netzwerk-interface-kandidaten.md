@@ -29,6 +29,17 @@ Sie ist keine Architekturentscheidung. Einzelne Tools und Artikel muessen separa
   - Passt der Dienst auf vorhandene Hardware, ohne den Modellbetrieb zu blockieren?
   - Kann er spaeter sauber hinter Interface, Queue oder Toolserver betrieben werden?
 
+### DeepGen 1.0
+
+- Quelle: Medium-PDF `A 5B Model that Proves Smarter Architecture Beats an 80B Giant`
+- Rolle: moeglicher multimodaler Kandidat fuer Bildgenerierung, Editing und Textrendering.
+- Status: Analyse-Kandidat.
+- Prueffragen:
+  - Sind Gewichte, Code, Lizenz und Hardwarebedarf praktisch nutzbar?
+  - Laeuft das Modell auf vorhandener oder geplanter Hardware sinnvoll?
+  - Ist der Nutzen gegenueber fastsdcpu oder anderen lokalen Bilddiensten gross genug?
+  - Wie gut funktionieren Deutsch/Englisch-Prompts, Story-Kontext und Bildbearbeitung?
+
 ## Offene Artikel und Themen
 
 - Token-Einsparung und Speedup:
