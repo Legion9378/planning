@@ -36,7 +36,7 @@ Sie ist keine Architekturentscheidung. Einzelne Tools und Artikel muessen separa
 - Startup-Token- und Zeit-Optimierung:
   - `I Cut Claude Code Exploration Time and Costs by 30% With One Tool`
 - Repo-/Job-Abschlusskopien:
-  - `How I Set Up My Repo So AI Can Write and Review 100% of My Code`
+  - `How I Set Up My Repo So AI Can Write and Review 100% of My Code` - verarbeitet als Guardrails-/Policy-Gate-Pattern; keine 100-Prozent-Autonomie.
 - Uebersetzungs-Worker:
   - `The Open-Source DeepL Alternative Is Here`
 - Validator-Idee:
