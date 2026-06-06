@@ -181,6 +181,20 @@ Sie ist keine Architekturentscheidung. Einzelne Tools und Artikel muessen separa
   - GPT-OSS-20B/vLLM als Zielsetup.
   - Proxy-/Tor-/Public-Exposure-Komplexitaet fuer den lokalen Standardbetrieb.
 
+## Embedding-Testkandidat Model2Vec
+
+- Quelle: Medium-PDF `Make Sentence Transformers 50x Smaller and 500x Faster with Model2Vec`
+- Rolle: spaeterer Testkandidat fuer fertige kleine CPU-first Embedding-Modelle.
+- Status: kein aktiver Distillation-Plan.
+- Einordnung:
+  - fertige Model2Vec-/Potion-Modelle koennen spaeter fuer Retrieval, Vorfilterung oder Routing getestet werden.
+  - eigene Distillation ist aktuell wahrscheinlich zu schwer fuer vorhandene Rechenleistung und RAM.
+  - Benchmark-Claims muessen lokal geprueft werden.
+- Nicht uebernehmen:
+  - eigene Distillation als kurzfristige Aufgabe.
+  - Model2Vec als gesetzte Embedding-Infrastruktur.
+  - `50x`/`500x`-Claims als belastbare Planungsannahme.
+
 ## Modelluebergreifende Promptmuster
 
 - Quelle: Medium-PDF `I Made Claude 45% Smarter`
