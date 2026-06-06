@@ -137,6 +137,21 @@ Sie ist keine Architekturentscheidung. Einzelne Tools und Artikel muessen separa
   - keine Secrets in Skills.
   - Tool- und Shop-Aktionen nur mit Rechte-, Draft- und Audit-Regeln.
 
+## Web-Research-Tools fuer Codex und Hermes-Agent
+
+- Quelle: Medium-PDF `How to Add Free Web Search to Your Local GPT-OSS-20B Setup`
+- Rolle: Randnotiz und Bestaetigung fuer bereits geplante Web-Tool-Schicht.
+- Status: SearXNG und Firecrawl sind als Tools eingeplant; keine neue UI-Architektur.
+- Zielrollen:
+  - SearXNG: lokale Websuche und Ergebnislisten.
+  - Firecrawl: Webseitenabruf, Crawling, Extraktion und besser strukturierte Webdaten.
+  - Hermes-Agent: kontrollierte Tool-Auswahl, Quellenpruefung, Zusammenfassung und Logging.
+  - Codex: bei Bedarf Recherche- und Quellenwerkzeug, nicht unkontrollierte Web-Injektion.
+- Nicht uebernehmen:
+  - Open WebUI als gesetztes Frontend.
+  - GPT-OSS-20B/vLLM als Zielsetup.
+  - Proxy-/Tor-/Public-Exposure-Komplexitaet fuer den lokalen Standardbetrieb.
+
 ## Gestrichene Punkte
 
 - Node.js-Vermeidung als feste Leitplanke ist hinfaellig.
