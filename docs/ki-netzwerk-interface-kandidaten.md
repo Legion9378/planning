@@ -69,6 +69,18 @@ Sie ist keine Architekturentscheidung. Einzelne Tools und Artikel muessen separa
   - reale Antwortqualitaet fuer Deutsch, Chat, Planung und einfache Assistenz.
   - Long-Context-Recall statt nur Context-Window-Groesse.
 
+## Hermes-Agent Toolcalling-Ergaenzung
+
+- Quelle: Medium-PDF `How I built a fully functional AI agent using Gemma3 270M, FunctionGemma, and EmbeddingGemma`
+- Rolle: Hintergrund-Orchestrierung fuer Chatmodelle ohne eigenes oder schwaches Toolcalling.
+- Status: Architektur-Pattern, kein konkreter Stack.
+- Ziel:
+  - Intent Routing.
+  - Tool-Auswahl ueber Function-/Routing-Schicht.
+  - Retrieval-/Embedding-Unterstuetzung.
+  - Tool Registry mit festen Schemas.
+  - Execution Logs fuer Audit, Memory und spaetere Verbesserung.
+
 ## Gestrichene Punkte
 
 - Node.js-Vermeidung als feste Leitplanke ist hinfaellig.
