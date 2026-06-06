@@ -91,6 +91,18 @@ Sie ist keine Architekturentscheidung. Einzelne Tools und Artikel muessen separa
   - Community-Skill-Registry als Vertrauensquelle.
   - konkrete OpenClaw-Workspace-Struktur.
 
+## Hermes-Agent Steuerdateien
+
+- Quelle: Medium-PDF `OpenClaw Automation- The 30 Prompts and Instructions Guide`
+- Rolle: Beispielquelle fuer portable Agent-Steuerdateien.
+- Status: Pattern, keine OpenClaw-Template-Uebernahme.
+- Relevante Dateirollen:
+  - Identitaet/Ton, z. B. `SOUL.md`.
+  - Arbeitsregeln, z. B. `AGENTS.md`, `agent.md` oder `CLAUDE.md`.
+  - Nutzer-/Projektkontext, z. B. `USER.md`.
+  - proaktive Checks, z. B. `HEARTBEAT.md`.
+- Regel: `CLAUDE.md` ist als Claude-spezifischer Name fuer eine allgemeine Agent-Regeldatei zu behandeln.
+
 ## Gestrichene Punkte
 
 - Node.js-Vermeidung als feste Leitplanke ist hinfaellig.
