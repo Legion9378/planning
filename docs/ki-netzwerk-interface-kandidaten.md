@@ -56,16 +56,18 @@ Sie ist keine Architekturentscheidung. Einzelne Tools und Artikel muessen separa
 ## Q4 Chatmodell-Fallbacks
 
 - Primaerer Bezugspunkt: Gemma4-e4B.
+- Lizenzstatus: Gemma 4 ist fuer die Modellfamilie mit Apache 2.0 als bestaetigtem Pluspunkt notiert.
 - Fallback-Kandidat: Qwen 3.5 oder Qwen 3.6 bis 9B, falls Gemma4-e4B Probleme macht.
 - Zusaetzlicher Testkandidat: Gemma4 12B Midrange.
 - Pruefzeitpunkt: Q4.
 - Vor Entscheidung pruefen:
   - Verfuegbarkeit und Modellstand.
-  - Lizenz.
+  - Lizenz erneut am konkreten Modellstand pruefen.
   - Chat-Template und Tool-/Agentenkompatibilitaet.
   - RAM/VRAM-Bedarf und Quantisierung.
   - Laufbarkeit mit geplanter lokaler Runner-Schicht.
   - reale Antwortqualitaet fuer Deutsch, Chat, Planung und einfache Assistenz.
+  - Long-Context-Recall statt nur Context-Window-Groesse.
 
 ## Gestrichene Punkte
 
