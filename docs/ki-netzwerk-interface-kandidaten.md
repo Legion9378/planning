@@ -156,6 +156,11 @@ Sie ist keine Architekturentscheidung. Einzelne Tools und Artikel muessen separa
 - Routing-Regel:
   - Hermes-Agent muss normalen Assistenzchat von echten Firmenarbeitsanweisungen unterscheiden.
   - Die persoenliche Assistentin kann CEO sein, darf aber nicht jede kleine Chat-Aufgabe als Firmenjob interpretieren.
+- Governance-Regel:
+  - Budget Caps pro Jobflow, Firmenarm oder Ressourcenklasse.
+  - Atomic Checkout, damit ein Step nur von einem Worker gehalten wird.
+  - Goal Ancestry, damit jeder Step Ziel, Mission und Nicht-Ziele kennt.
+  - Board Approval Gate fuer riskante Aktionen, neue Rechte, Veroeffentlichungen und Kostensteigerungen.
 - Nicht uebernehmen:
   - Paperclip-Plattform.
   - Paperclip-Company-Templates.
