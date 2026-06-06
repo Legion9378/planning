@@ -8,6 +8,17 @@ Sie ist keine Architekturentscheidung. Einzelne Tools und Artikel muessen separa
 
 ## Aktive Analyse-Kandidaten
 
+### Open CoreUI
+
+- Quelle: Medium-PDF `Open CoreUI`
+- Rolle: moeglicher leichter Desktop-/Web-Client fuer lokale/LAN-Nutzung.
+- Status: Analyse-Kandidat, kein gesetztes Frontend.
+- Prueffragen:
+  - Kann Open CoreUI Hermes-Agent als Control Plane ansprechen, statt selbst Orchestrator zu sein?
+  - Sind Desktop, Mobile oder Web-Nutzung fuer Björns Workflow ausreichend?
+  - Wie reif sind Security, Session-Verwaltung, Datei-Handling und Logs?
+  - Ist der Rust-/Tauri-/Single-Binary-Ansatz auf Zielhardware stabil?
+
 ### SkillServer
 
 - Quelle: <https://github.com/mudler/skillserver>
