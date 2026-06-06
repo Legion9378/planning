@@ -152,6 +152,26 @@ Sie ist keine Architekturentscheidung. Einzelne Tools und Artikel muessen separa
   - GPT-OSS-20B/vLLM als Zielsetup.
   - Proxy-/Tor-/Public-Exposure-Komplexitaet fuer den lokalen Standardbetrieb.
 
+## Modelluebergreifende Promptmuster
+
+- Quelle: Medium-PDF `I Made Claude 45% Smarter`
+- Rolle: Prompt-Pattern fuer Agenten und Chatmodelle, nicht Claude-spezifische Architektur.
+- Status: teilweise uebernehmen.
+- Einordnung:
+  - Der Artikel ist stark aus Claude-/Cloud-Perspektive geschrieben.
+  - Die Promptmuster sind aber auf andere KI-Systeme uebertragbar.
+  - Björn hatte mit einem frueheren Artikel-Prompt bereits Erfolge bei ChatGPT, Grok und DeepSeek.
+- Uebernehmen:
+  - spezifische Rolle.
+  - klares Ziel und Nicht-Ziel.
+  - Methodik mit Arbeitsschritten.
+  - Qualitaetskriterien und Self-Check.
+  - sachliche Stakes, wenn sie echte Prioritaeten beschreiben.
+- Nicht als Standard uebernehmen:
+  - Trinkgeld-/Geld-Prompting.
+  - aggressive Challenge-Sprache.
+  - `45 Prozent smarter` oder aehnliche Claims als belastbare Aussage.
+
 ## Gestrichene Punkte
 
 - Node.js-Vermeidung als feste Leitplanke ist hinfaellig.
