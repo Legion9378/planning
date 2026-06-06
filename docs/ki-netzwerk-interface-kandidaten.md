@@ -114,6 +114,29 @@ Sie ist keine Architekturentscheidung. Einzelne Tools und Artikel muessen separa
   - proaktive Checks, z. B. `HEARTBEAT.md`.
 - Regel: `CLAUDE.md` ist als Claude-spezifischer Name fuer eine allgemeine Agent-Regeldatei zu behandeln.
 
+## Hermes-Agent Skill Library
+
+- Quelle: Medium-PDF `9 Agent Skills Repos I Tried`
+- Rolle: Pruef- und Aufbaupfad fuer eine eigene kontrollierte Skill Library.
+- Status: Pattern und Kandidatenliste, keine automatische Installation externer Skills.
+- Grundstruktur:
+  - `SKILL.md` als zentrale Anweisungsdatei.
+  - optionale `scripts/`, `references/`, `examples/` und `templates/`.
+  - Skill-Discovery nach Aufgabe, nicht dauerhafte Kontextinjektion.
+- Fuer Codex und spaetere lokale Agenten interessante Zusatz-Skills:
+  - Obsidian Markdown/Bases/Canvas fuer Novel-Writer-Vault und Lore.
+  - Story Bible / Lore Consistency fuer Multi-Crossover-Fanfiction.
+  - Voice Calibration / Humanizer fuer Björns Schreibstil.
+  - Content Repurposing und SEO Content fuer Artikel, Newsletter, Produktseiten und Landingpages.
+  - UI Design-System Briefing als Ergaenzung zu bestehenden Web-App-Skills.
+  - Frontend Implementation Review fuer React, HTMX, HTML/CSS und responsive States.
+  - E-Commerce Listing / Checkout Copy / Shop Ops fuer Gumroad-aehnliche digitale Produkte.
+- Regeln:
+  - Community-Skills erst pruefen.
+  - externe Inhalte untrusted behandeln.
+  - keine Secrets in Skills.
+  - Tool- und Shop-Aktionen nur mit Rechte-, Draft- und Audit-Regeln.
+
 ## Gestrichene Punkte
 
 - Node.js-Vermeidung als feste Leitplanke ist hinfaellig.
