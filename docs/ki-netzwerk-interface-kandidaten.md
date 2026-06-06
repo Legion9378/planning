@@ -162,6 +162,11 @@ Sie ist keine Architekturentscheidung. Einzelne Tools und Artikel muessen separa
   - Goal Ancestry, damit jeder Step Ziel, Mission und Nicht-Ziele kennt.
   - Board Approval Gate fuer riskante Aktionen, neue Rechte, Veroeffentlichungen und Kostensteigerungen.
   - Evidence Gate: Reasoning-Traces und Self-Checks sind Diagnosematerial, aber keine Beweise; riskante Entscheidungen brauchen Tool-Evidenz, Tests, Logs, Quellen, Cross-Checks oder Bjoerns Freigabe.
+- Worker-Kandidat:
+  - Falcon-H1R-7B als unabhaengiger Jobflow-Reasoner pruefen.
+  - Rolle: Plaene, Risiken, Alternativen, Abschlusskriterien und Zwischenergebnisse bewerten.
+  - Nicht als autonomer Entscheider; Evidence Gate und Board Approval bleiben davor.
+  - Vor Nutzung: Lizenz, Acceptable Use, Runner/GGUF, RAM, Deutsch/Englisch, Tool-/Agentenkompatibilitaet und `confidently wrong` testen.
 - Nicht uebernehmen:
   - Paperclip-Plattform.
   - Paperclip-Company-Templates.
