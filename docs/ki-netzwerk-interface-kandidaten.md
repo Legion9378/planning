@@ -81,6 +81,16 @@ Sie ist keine Architekturentscheidung. Einzelne Tools und Artikel muessen separa
   - Tool Registry mit festen Schemas.
   - Execution Logs fuer Audit, Memory und spaetere Verbesserung.
 
+## Hermes-Agent Vergleichsquelle OpenClaw
+
+- Quelle: Medium-PDF `How OpenClaw Works`
+- Rolle: Vergleichsquelle fuer Gateway, Sessions, Skills, Context Assembly und Memory-on-demand.
+- Status: Architekturvergleich, keine Software-Infrastruktur.
+- Nicht uebernehmen:
+  - OpenClaw als Produkt.
+  - Community-Skill-Registry als Vertrauensquelle.
+  - konkrete OpenClaw-Workspace-Struktur.
+
 ## Gestrichene Punkte
 
 - Node.js-Vermeidung als feste Leitplanke ist hinfaellig.
