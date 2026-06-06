@@ -172,6 +172,21 @@ Sie ist keine Architekturentscheidung. Einzelne Tools und Artikel muessen separa
   - aggressive Challenge-Sprache.
   - `45 Prozent smarter` oder aehnliche Claims als belastbare Aussage.
 
+## Website-Frontend mit WordPress-Backend und HTMX
+
+- Quelle: Medium-PDF `HTMX vs React`
+- Rolle: Anstoss fuer das lokale Repo `/home/work/Local-git/Website`.
+- Status: aktive Projektidee, nicht nur Randnotiz.
+- Ziel:
+  - WordPress als Backend, Admin, Content- und Datenbasis behalten.
+  - oeffentliches Frontend durch eigene HTML/PHP/HTMX/JavaScript-Schicht ersetzen oder schrittweise abloesen.
+  - schwere SPA-/Framework-Altlasten vermeiden, solange die Anforderungen server-driven loesbar sind.
+- Regeln:
+  - WordPress-Core nicht direkt veraendern, wenn Theme, Plugin, Hook, Filter oder eigenes Modul reicht.
+  - HTMX ist bevorzugt fuer kleine Interaktionen, Formulare, Fragmente und serverseitig kontrollierte UI.
+  - React bleibt moeglich, wenn echte Client-Komplexitaet entsteht.
+  - Website-Repo soll nach Einrichtung eines eigenen GitHub-Remotes in den Local-git-Sync aufgenommen werden.
+
 ## Gestrichene Punkte
 
 - Node.js-Vermeidung als feste Leitplanke ist hinfaellig.
