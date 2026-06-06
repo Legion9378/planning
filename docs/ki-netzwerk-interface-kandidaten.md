@@ -161,6 +161,7 @@ Sie ist keine Architekturentscheidung. Einzelne Tools und Artikel muessen separa
   - Atomic Checkout, damit ein Step nur von einem Worker gehalten wird.
   - Goal Ancestry, damit jeder Step Ziel, Mission und Nicht-Ziele kennt.
   - Board Approval Gate fuer riskante Aktionen, neue Rechte, Veroeffentlichungen und Kostensteigerungen.
+  - Evidence Gate: Reasoning-Traces und Self-Checks sind Diagnosematerial, aber keine Beweise; riskante Entscheidungen brauchen Tool-Evidenz, Tests, Logs, Quellen, Cross-Checks oder Bjoerns Freigabe.
 - Nicht uebernehmen:
   - Paperclip-Plattform.
   - Paperclip-Company-Templates.
