@@ -137,6 +137,30 @@ Sie ist keine Architekturentscheidung. Einzelne Tools und Artikel muessen separa
   - keine Secrets in Skills.
   - Tool- und Shop-Aktionen nur mit Rechte-, Draft- und Audit-Regeln.
 
+## Hermes-Agent CEO und Jobflow-Firma
+
+- Quelle: Medium-PDF `Paperclip AI`
+- Rolle: Firmenmetapher und Organisationsmodell fuer Hermes-Agent, nicht Paperclip als Software.
+- Status: Architekturidee fuer das KI-Netzwerk.
+- Grundidee:
+  - Hermes-Agent ist CEO.
+  - einzelne Jobflows sind spezialisierte Firmenarme.
+  - jeder Firmenarm bekommt eigene Agentensteuerung, Regeln, State und Artefaktorte.
+- Hardware-Regel:
+  - kein ungezaehmter Parallelbetrieb auf schwacher Hardware.
+  - sequenzieller Parallelismus ueber Warteschlange.
+  - pro Jobflow maximal zwei Stunden Arbeitsfenster.
+  - wenn ein Workflow-Step frueher fertig ist, endet das Arbeitsfenster frueher.
+  - danach State speichern, Modell entladen, zehn bis fuenfzehn Minuten Pause.
+  - beim naechsten Durchlauf wird ein existierender Job-State geladen statt neu gestartet.
+- Routing-Regel:
+  - Hermes-Agent muss normalen Assistenzchat von echten Firmenarbeitsanweisungen unterscheiden.
+  - Die persoenliche Assistentin kann CEO sein, darf aber nicht jede kleine Chat-Aufgabe als Firmenjob interpretieren.
+- Nicht uebernehmen:
+  - Paperclip-Plattform.
+  - Paperclip-Company-Templates.
+  - parallele Agentenarme ohne Ressourcen- und State-Grenzen.
+
 ## Web-Research-Tools fuer Codex und Hermes-Agent
 
 - Quelle: Medium-PDF `How to Add Free Web Search to Your Local GPT-OSS-20B Setup`
