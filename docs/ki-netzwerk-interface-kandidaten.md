@@ -195,6 +195,20 @@ Sie ist keine Architekturentscheidung. Einzelne Tools und Artikel muessen separa
   - Model2Vec als gesetzte Embedding-Infrastruktur.
   - `50x`/`500x`-Claims als belastbare Planungsannahme.
 
+## Exo AI Cluster
+
+- Quelle: Medium-PDF `I Turned Two Macs Into an 80B AI Cluster`
+- Rolle: Randnotiz zu Geraete-Pooling, kein aktiver Kandidat.
+- Status: aktuell nicht einplanen.
+- Grund:
+  - GPU ist fuer Björns vorhandene Hardware aktuell nicht der Pfad.
+  - alter Mac Mini Late 2012 ist nicht Metal-faehig.
+  - Artikel ist stark Apple-Silicon-/MLX-/Metal-orientiert.
+  - 80B-/TPS-Angaben sind nicht auf Björns Hardware uebertragbar.
+- Merken:
+  - spaeter koennen mehrere lokale Worker hinter Hermes-Agent/Gateway haengen.
+  - zuerst stabile Single-Node-Basis aufbauen.
+
 ## Modelluebergreifende Promptmuster
 
 - Quelle: Medium-PDF `I Made Claude 45% Smarter`
