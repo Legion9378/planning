@@ -53,6 +53,20 @@ Sie ist keine Architekturentscheidung. Einzelne Tools und Artikel muessen separa
 - Validator-Idee:
   - TMR/Samsung-7M nur pruefen, falls ein real nutzbarer Download und belastbare Quellen verfuegbar sind.
 
+## Q4 Chatmodell-Fallbacks
+
+- Primaerer Bezugspunkt: Gemma4-e4B.
+- Fallback-Kandidat: Qwen 3.5 oder Qwen 3.6 bis 9B, falls Gemma4-e4B Probleme macht.
+- Zusaetzlicher Testkandidat: Gemma4 12B Midrange.
+- Pruefzeitpunkt: Q4.
+- Vor Entscheidung pruefen:
+  - Verfuegbarkeit und Modellstand.
+  - Lizenz.
+  - Chat-Template und Tool-/Agentenkompatibilitaet.
+  - RAM/VRAM-Bedarf und Quantisierung.
+  - Laufbarkeit mit geplanter lokaler Runner-Schicht.
+  - reale Antwortqualitaet fuer Deutsch, Chat, Planung und einfache Assistenz.
+
 ## Gestrichene Punkte
 
 - Node.js-Vermeidung als feste Leitplanke ist hinfaellig.
