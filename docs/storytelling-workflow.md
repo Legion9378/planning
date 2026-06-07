@@ -27,8 +27,16 @@
   - **Shotcut** oder **DaVinci Resolve** (kostenlos auf Linux)
   - iMovie + GarageBand auf iPad als Alternative
 
-## 4. Technik
+## 4. Musik und Hintergrundaudio
+
+- Ace Step 1.5 ist als Open-Source-Alternative zu Suno AI ein wieder aufzunehmender Testkandidat.
+- Frueherer Test scheiterte an einem Gradio-Fehler; dieser Fehler wurde kurz vor dem Ausfall der internen SSD gefunden, aber nicht mehr praktisch nachgetestet.
+- Naechster Schritt: Installation/Test wiederholen und Gradio-Version, Startfehler, Logs und Fix dokumentieren.
+- Offen: weitere Tools fuer Audiodateien, nutzbare Hintergrundmusik und loopbare Tracks recherchieren.
+- GarageBand bleibt fuer spaeteres manuelles Mixing relevant.
+
+## 5. Technik
 - Laptop: Xubuntu 24.04 LTS
-- Spätere Verlagerung ins KI-Netzwerk (OpenClaw Orchestrierung)
+- Spätere Verlagerung ins KI-Netzwerk
 
 Weitere Details werden ergänzt.
