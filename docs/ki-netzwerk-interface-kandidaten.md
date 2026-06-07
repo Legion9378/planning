@@ -106,6 +106,24 @@ Jeder neue Artikel oder Toolvorschlag muss zusaetzlich durch den Low-Budget-/CPU
   - Tool Registry mit festen Schemas.
   - Execution Logs fuer Audit, Memory und spaetere Verbesserung.
 
+## Rollenmodell und Orchestrator
+
+- Quelle: Chat-History `chatgpt-architektur-integration-und-vorschlage`.
+- Status: Architekturregel, keine Toolentscheidung.
+- Rollen:
+  - PA beziehungsweise Hermes-Agent-Frontend: dialogisch.
+  - Reasoner: analytisch.
+  - Validator: kontrollierend.
+  - Orchestrator: modellfrei beziehungsweise semantikfrei.
+- Regel:
+  - Der Orchestrator ist Dispatcher, Workflow-Controller, State-Manager und Regelvollstrecker.
+  - Governance, Jobflows, Policies und Björns Freigabe sind der eigentliche Entscheidungsrahmen.
+  - SkillServer darf Tool Discovery und Execution Hooks liefern, aber keine Workflow-Steuerung oder State-Authority.
+- Korrekturen:
+  - SurrealDB, PageIndex, LocalAGI, Nanobot und FastAPI-WebUI aus dieser fruehen Datei nicht als Zielstand uebernehmen.
+  - RWKV/RNN nur als Low-RAM-/Long-Context-/Spezialhardware-Pruefkontext fuehren, nicht als gesetztes Modell.
+  - Rockchip-NPU und Coral Dual TPU sind Pruefkontexte, keine bestaetigte Beschleunigungsstrategie.
+
 ## Hermes-Agent Vergleichsquelle OpenClaw
 
 - Quelle: Medium-PDF `How OpenClaw Works`

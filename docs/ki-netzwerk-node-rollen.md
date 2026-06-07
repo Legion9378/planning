@@ -36,11 +36,26 @@ Hardware- und OS-Details stehen in `docs/hardware-und-os-stand.md`.
 - Keine aktive KI-Rolle.
 - Keine Delegations-/Worker-Rolle aus den fruehen LocalAI-Planungen uebernehmen.
 
-### bmax
+### BMAX B1 Pro / N4000
 
 - Rolle: Toolserver und moeglicher Datenbankserver.
+- 8 GB RAM.
 - Kandidat fuer spaetere Datenbankschichten, insbesondere falls FalkorDB fuer Graph plus Vector produktiv gebraucht wird.
 - Keine GPU-/LocalAI-Bildworker-Annahme aus der fruehen Planung uebernehmen.
+- Kein Modellrunner unter aktueller RAM-Regel.
+
+### Intel N5105
+
+- Rolle: Toolserver.
+- 8 GB RAM.
+- Keine Haupt-KI und kein Modellrunner unter aktueller RAM-Regel.
+- Aufgaben muessen als leichte Dienste, Tools, Bridge, Queue-Hilfen oder andere nicht-inferenzlastige Funktionen geplant werden.
+
+### RK3588-Rechner
+
+- 8 GB RAM.
+- Bleibt auf Ubuntu 22.04 wegen Rockchip-NPU-Tools.
+- NPU ist ein Pruefkontext fuer Spezialaufgaben, aber keine gesetzte LLM-/RWKV-/RNN-Beschleunigung.
 
 ### Pi400
 

@@ -36,6 +36,27 @@ Diese Datei sammelt den aktuellen Hardware- und Betriebssystemstand. Aeltere Cha
 - Ubuntu 22.04 bleibt installiert.
 - Grund: vorinstallierte und zusaetzlich installierte Tools fuer die Rockchip-NPU.
 
+### BMAX B1 Pro / N4000
+
+- 8 GB RAM.
+- In fruehen Chat-History-Dateien teilweise als `N4000-Node` beschrieben.
+- Aktuelle Rolle: Toolserver und moeglicher Datenbankserver.
+- Zielkandidat fuer FalkorDB, falls Graph plus Vector spaeter produktiv gebraucht wird.
+- Kein Modellrunner unter aktueller RAM-Regel.
+
+### Intel N5105
+
+- 8 GB RAM.
+- Wird allgemein `N5105` genannt.
+- Aktuelle Rolle: Toolserver.
+- Kein Modellrunner unter aktueller RAM-Regel.
+
+### Coral Dual TPU
+
+- Vorhandenes oder moeglicherweise nutzbares Zusatzmodul.
+- Aktuell keine gesetzte Rolle.
+- Nur als Pruefkontext fuer spaetere Spezialbeschleunigung fuehren; keine Annahme, dass LLM-, RWKV- oder RNN-Workloads damit praktisch beschleunigt werden.
+
 ### Lokaler Webserver
 
 - Soll spaeter veroeffentlicht werden.
@@ -56,4 +77,3 @@ Diese Datei sammelt den aktuellen Hardware- und Betriebssystemstand. Aeltere Cha
 - Mac Mini als NAS ist ueberholt.
 - Alte 4-GB-RAM-Angaben fuer den Mac Mini sind ueberholt.
 - Xubuntu/Ubuntu-Server-24.04-Annahmen aus aelteren Chat-History-Dateien sind nicht der aktuelle Standard.
-
