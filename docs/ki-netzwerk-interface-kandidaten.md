@@ -132,6 +132,22 @@ Aktuelle Hardware- und Node-Rollen stehen in `docs/ki-netzwerk-node-rollen.md`. 
   - Mobile Git-Clients werden nur wieder geprueft, wenn sie die benoetigten Admin-Aktionen oder eine saubere Alternative dazu bieten.
   - Bis dahin: Repo-Administration ueber GitHub-Weboberflaeche oder geeigneten Codex/GitHub-Workflow.
 
+## MCP-Git Gateway und Admin-Webhooks
+
+- Quelle: Chat-History `chatgpt-webserver-und-ki-netzwerk---programmiersprachen-fur-mcp-server`
+- Rolle: zentrale Git- und Admin-Task-Schicht fuer das spaetere KI-Netzwerk.
+- Status: Architekturpattern, kein konkreter Stack.
+- Git-Regeln:
+  - Worker-KIs bekommen nicht automatisch direkte Git-/SSH-Rechte.
+  - Aenderungen, neue Dateien oder Fetch-Anfragen laufen ueber einen MCP-Git-Dienst.
+  - `pull`, `commit`, `push`, Export und Import brauchen Scope, Branch/Ref, Pfad, Locking, Queue und Audit Log.
+  - Lokales Git auf dem NAS kann als Arbeitsablage dienen.
+  - Codex kann spaeter regelmaessig pruefen und nach GitHub synchronisieren.
+- Webhook-Regeln:
+  - Webhook-APIs sind primaer fuer automatische Administration, Pflege, Status, Trigger und interne Automatisierung vorgesehen.
+  - Die lokale KI soll nach Moeglichkeit nicht aktiv in User-Interaktionen auf Support, Blog oder Kommentaren eingreifen.
+  - Public-Actions brauchen Review/Freigabe.
+
 ## Hermes-Agent Steuerdateien
 
 - Quelle: Medium-PDF `OpenClaw Automation- The 30 Prompts and Instructions Guide`
