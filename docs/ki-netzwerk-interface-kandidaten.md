@@ -317,6 +317,19 @@ Aktuelle Hardware- und Node-Rollen stehen in `docs/ki-netzwerk-node-rollen.md`. 
   - DeepBlue als aktueller Zielname.
   - Exo-/virtueller-Supercomputer-Planung als realistische Baseline.
 
+## Collector als eigener Jobflow
+
+- Quelle: Chat-History `chatgpt-openfang-collector-fur-crossover`
+- Status: Jobflow-Idee, keine Toolentscheidung.
+- Rolle:
+  - semi-automatische Informationssammlung.
+  - Story-Grundlagen, Crossover-Lore, Quellenlisten und andere Projektkontexte vorbereiten.
+  - Ergebnisse fuer Story-, Lore-, Research- oder Website-Jobflows bereitstellen.
+- Regeln:
+  - OpenFang ist Inspiration, keine gesetzte Software.
+  - Collector laeuft als eigener Jobflow mit eigenem State.
+  - Collector-Ergebnisse brauchen Quellen, Status und Review, bevor sie in KB, LLM-Wiki, Obsidian oder Produktionsflows einfliessen.
+
 ## Modelluebergreifende Promptmuster
 
 - Quelle: Medium-PDF `I Made Claude 45% Smarter`

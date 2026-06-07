@@ -9,8 +9,13 @@
 
 ## 1. Story Generation
 - Vollständig NSFW-fähig in Englisch
-- Szenenweise (max 200-400 Wörter pro Chunk)
-- Jede Szene enthält TTS-Direktiven (Emotion, Pace, Tone, Pausen)
+- Szenenweise; die Szenenlaenge folgt dem Inhalt, grob von sehr kurz bis etwa fuenf Minuten Audio.
+- Jede Szene wird zuerst als fast finale Kapitel-Szene geschrieben und enthaelt zusaetzlich TTS-Direktiven.
+- TTS-Marker koennen Sprecher, Narrator, Betonung, Aussprachehilfen und Synthesehinweise steuern.
+- Nach Review/Rewrite entstehen nacheinander zwei Fassungen:
+  - TTS-Script mit Markern.
+  - Lesefassung ohne Marker fuer das Kapitel.
+- Es gibt keinen separaten Polishing-Step ausserhalb der Workflow-Kontrollschritte.
 
 ## 2. TTS Pipeline
 - Referenzaudio pro Charakter (einmal aufnehmen oder generieren)
@@ -44,5 +49,13 @@
 ## 5. Technik
 - Laptop: Xubuntu 24.04 LTS
 - Spätere Verlagerung ins KI-Netzwerk
+- Verarbeitung ist als CPU-basierter Workflow zu planen; keine nutzbare iGPU, dGPU oder eGPU voraussetzen.
+
+## 6. Collector-Jobflow
+
+- Ein OpenFang-inspirierter Collector bleibt als spaeterer eigener Jobflow vorgesehen.
+- Zweck: semi-automatische Informationssammlung fuer Story-Grundlagen, Crossover-Lore, Quellenlisten und andere Projektkontexte.
+- Der Collector kann andere Jobflows vorbereiten, laeuft aber mit eigenem State und eigener Review-Grenze.
+- Collector-Ergebnisse sind Input, keine automatisch uebernommene Wahrheit.
 
 Weitere Details werden ergänzt.
