@@ -6,6 +6,8 @@ Diese Liste sammelt Kandidaten aus der Planungsnotiz `Fragen zu Artikeln die ein
 
 Sie ist keine Architekturentscheidung. Einzelne Tools und Artikel muessen separat geprueft werden, bevor sie in die Zielarchitektur uebernommen werden.
 
+Aktuelle Hardware- und Node-Rollen stehen in `docs/ki-netzwerk-node-rollen.md`. Diese Datei hat Vorrang vor aelteren Chat-History-Annahmen zu Pi5, pi4web, pi4eva, bmax, Pi400, DietPi, lokalem Gitea und LocalAI-Verteilung.
+
 ## Aktive Analyse-Kandidaten
 
 ### Open CoreUI
