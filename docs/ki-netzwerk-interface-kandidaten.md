@@ -298,6 +298,23 @@ Aktuelle Hardware- und Node-Rollen stehen in `docs/ki-netzwerk-node-rollen.md`. 
 - Merken:
   - spaeter koennen mehrere lokale Worker hinter Hermes-Agent/Gateway haengen.
   - zuerst stabile Single-Node-Basis aufbauen.
+  - `DeepBlue` war historisch als Exo-aehnlicher "Deep Blue fuer Arme" aus drei bis vier Rechnern gedacht; diese virtuelle-Supercomputer-Annahme wird nicht weiter als Zielarchitektur gefuehrt.
+
+## Universelles Jobframework Laptop und Netzwerk
+
+- Quelle: Chat-History `chatgpt-ki-planung-ideenexperiment`
+- Status: Architekturregel, keine Modellentscheidung.
+- Regeln:
+  - Jobtypen wie Storywriting, Coding, Webcoding, Blogwriting, Translation, TTS und Research nutzen dieselbe Grundlogik.
+  - Laptop und spaetere staerkere Hardware unterscheiden sich in Ressourcen, Geschwindigkeit, RAM und KB-/Recall-Reichweite, nicht im Ablauf.
+  - Kein automatischer Parallelbetrieb mehrerer Agenten als Cluster-Annahme.
+  - Ein Job laeuft seriell und deterministisch.
+  - Nach Jobende oder Arbeitsfenster: State speichern, Modell oder schwere Ressourcen entladen.
+  - Das, was das KI-Netzwerk "lernt", wird in KB/Memory/Recall gespeichert und kann vom Laptop genutzt werden.
+- Nicht uebernehmen:
+  - alte Modelllisten aus der Datei.
+  - DeepBlue als aktueller Zielname.
+  - Exo-/virtueller-Supercomputer-Planung als realistische Baseline.
 
 ## Modelluebergreifende Promptmuster
 
