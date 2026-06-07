@@ -148,6 +148,16 @@ Aktuelle Hardware- und Node-Rollen stehen in `docs/ki-netzwerk-node-rollen.md`. 
   - Die lokale KI soll nach Moeglichkeit nicht aktiv in User-Interaktionen auf Support, Blog oder Kommentaren eingreifen.
   - Public-Actions brauchen Review/Freigabe.
 
+## LocalAI-Familie / Image-Gate
+
+- Quelle: Chat-History `chatgpt-webserver-und-ki-netzwerk---jina-reranker-einsatzmoglichkeiten`
+- Status: Korrektur- und Pruefregel, keine Jina-Reranker-Entscheidung.
+- Regeln:
+  - LocalAGI nicht als separate Zielkomponente einplanen.
+  - Alte LocalAI-/LocalAGI-/LocalRecall-Notizen nur gegen den aktuellen LocalAI-Stand bewerten.
+  - Vor Docker-/Compose-Planung pruefen: Image existiert, Tags existieren, Pull funktioniert, Dockerfile oder Build-Anleitung ist aktuell.
+  - Leere go-skynet-/Quay-Repos sind Warnsignal und keine Architekturgrundlage.
+
 ## Hermes-Agent Steuerdateien
 
 - Quelle: Medium-PDF `OpenClaw Automation- The 30 Prompts and Instructions Guide`
