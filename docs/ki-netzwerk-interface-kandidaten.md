@@ -37,10 +37,12 @@ Aktuelle Hardware- und Node-Rollen stehen in `docs/ki-netzwerk-node-rollen.md`. 
 - Quelle: <https://github.com/rupeshs/fastsdcpu>
 - Rolle: moeglicher Bildgenerator fuer KI-Netzwerk und Interface.
 - Status: Analyse-Kandidat.
+- Korrektur: wieder aufnehmen, weil API-Faehigkeit fuer spaetere Jobflows wichtiger ist als reine Browserbedienung.
 - Prueffragen:
   - Reicht die CPU-Performance fuer lokale Bildgenerierung oder nur fuer kleine/experimentelle Jobs?
   - Passt der Dienst auf vorhandene Hardware, ohne den Modellbetrieb zu blockieren?
   - Kann er spaeter sauber hinter Interface, Queue oder Toolserver betrieben werden?
+  - Sind API, Queueing, Fehlerbehandlung und Rechte-/Pfadmodell fuer Hermes-Agent nutzbar?
 
 ### DeepGen 1.0
 
