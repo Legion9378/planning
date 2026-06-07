@@ -71,6 +71,10 @@ Sie ist keine Architekturentscheidung. Einzelne Tools und Artikel muessen separa
 - Fallback-Kandidat: Qwen 3.5 oder Qwen 3.6 bis 9B, falls Gemma4-e4B Probleme macht.
 - Zusaetzlicher Testkandidat: Gemma4 12B Midrange.
 - Pruefzeitpunkt: Q4.
+- Aktuelle Laptop-Grenze:
+  - 32 GB RAM reichen nicht automatisch fuer produktiven lokalen KI-Betrieb, wenn Browser, Codex, Editor, Docker-Dienste und andere Programme parallel laufen.
+  - Gemma4-e4B unter Ollama war auf dem Laptop bei einzelnen Auftraegen mit bis zu fuenf Stunden Laufzeit nicht als interaktiver Hermes-Agent-Arbeitsmotor brauchbar.
+  - Lokale Modelle muessen deshalb Antwortzeit, RAM-Verbrauch und Blockierverhalten auf der Zielhardware praktisch bestehen, bevor sie mehr als Testkandidaten sind.
 - Vor Entscheidung pruefen:
   - Verfuegbarkeit und Modellstand.
   - Lizenz erneut am konkreten Modellstand pruefen.
