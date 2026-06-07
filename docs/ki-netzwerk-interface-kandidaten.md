@@ -160,6 +160,8 @@ Aktuelle Hardware- und Node-Rollen stehen in `docs/ki-netzwerk-node-rollen.md`. 
   - Alte LocalAI-/LocalAGI-/LocalRecall-Notizen nur gegen den aktuellen LocalAI-Stand bewerten.
   - Vor Docker-/Compose-Planung pruefen: Image existiert, Tags existieren, Pull funktioniert, Dockerfile oder Build-Anleitung ist aktuell.
   - Leere go-skynet-/Quay-Repos sind Warnsignal und keine Architekturgrundlage.
+  - Aktuelle Planung behandelt die fruehere LocalAI-/LocalAGI-/LocalRecall-Familie als zusammengefassten `LocalAI`-Kontext.
+  - Laptop-LocalAI ist Werkbankbetrieb fuer aktive Sitzungen, kein dauerhafter Netzwerkdienst.
 
 ## Story-KI Rollenmodell
 
@@ -314,6 +316,7 @@ Aktuelle Hardware- und Node-Rollen stehen in `docs/ki-netzwerk-node-rollen.md`. 
   - Ein Job laeuft seriell und deterministisch.
   - Nach Jobende oder Arbeitsfenster: State speichern, Modell oder schwere Ressourcen entladen.
   - Das, was das KI-Netzwerk "lernt", wird in KB/Memory/Recall gespeichert und kann vom Laptop genutzt werden.
+  - Der Laptop wird nicht automatisch als KI-Netzwerk-Node eingeplant, nur weil er verfuegbar ist.
 - Nicht uebernehmen:
   - alte Modelllisten aus der Datei.
   - DeepBlue als aktueller Zielname.

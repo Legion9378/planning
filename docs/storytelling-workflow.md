@@ -29,6 +29,7 @@
 - Zielpfad: Storytext -> Audiobook-Skript -> TTS/Mehrstimmen-Ausgabe -> Mixing -> optionales Video mit bis zu drei Hosts/Lesenden.
 - Piper, Coqui und weitere TTS-Loesungen bleiben Testkandidaten. Coqui wird nicht automatisch ausgeschlossen, aber als Wartungsrisiko markiert, weil es seit einiger Zeit nicht mehr aktiv weiterentwickelt wird.
 - Der Mac Mini ist nicht als TTS-Host eingeplant; er bleibt fuer OpenCode und Agent Brain im KI-Netzwerk reserviert.
+- TTS-Auswahl muss budgetschonend erfolgen: zuerst kostenlose, lokale oder sehr guenstige Loesungen pruefen; keine kostenpflichtigen Cloud-/Abo-Dienste als Default.
 
 ## 3. Video Production
 - Avatar-Bild (sitzend im Sessel)

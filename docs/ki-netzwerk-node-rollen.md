@@ -61,6 +61,8 @@ Hardware- und OS-Details stehen in `docs/hardware-und-os-stand.md`.
 - 32 GB RAM.
 - Interne SSD ausgefallen; aktuelle Systemplatte ist eine externe USB-HDD mit 2 TB.
 - Calibre muss wieder als GUI-Tool installiert werden.
+- Rolle: temporaere KI-Werkbank fuer aktive Sitzungen, Tests und Codex-Arbeit.
+- Keine dauerhafte Zentrale, kein staendig laufender KI-Netzwerk-Worker und kein Pflicht-Queue-Host.
 
 ## Verworfen / offen
 
