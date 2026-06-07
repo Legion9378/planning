@@ -8,6 +8,8 @@ Sie ist keine Architekturentscheidung. Einzelne Tools und Artikel muessen separa
 
 Aktuelle Hardware- und Node-Rollen stehen in `docs/ki-netzwerk-node-rollen.md`. Diese Datei hat Vorrang vor aelteren Chat-History-Annahmen zu Pi5, pi4web, pi4eva, bmax, Pi400, DietPi, lokalem Gitea und LocalAI-Verteilung.
 
+Jeder neue Artikel oder Toolvorschlag muss zusaetzlich durch den Low-Budget-/CPU-first-Filter: reale Hardware, RAM, fehlende nutzbare GPU, Stromkosten, Wartung, Stabilitaet, State, Rechte, Logging und Review. Cloud-, GPU- oder Parallelismus-Annahmen gelten nur als Pattern-Kandidaten, bis sie auf Björns Zielhardware praktisch tragfaehig sind.
+
 ## Aktive Analyse-Kandidaten
 
 ### Open CoreUI
