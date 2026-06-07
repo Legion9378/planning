@@ -108,6 +108,18 @@ Aktuelle Hardware- und Node-Rollen stehen in `docs/ki-netzwerk-node-rollen.md`. 
   - Community-Skill-Registry als Vertrauensquelle.
   - konkrete OpenClaw-Workspace-Struktur.
 
+## OpenRouter Hybrid-Gateway
+
+- Quelle: Chat-History `chatgpt-webserver-und-ki-netzwerk---openrouter-localai-integration`
+- Rolle: externer/Hybrid-Zugang fuer Modelle, die lokal nicht sinnvoll laufen oder als Vergleich/Fallback gebraucht werden.
+- Status: relevant, aber nur hinter kontrollierter Bridge/Gateway.
+- Regeln:
+  - OpenRouter nicht direkt unkontrolliert aus Agenten heraus nutzen.
+  - Budgetgrenzen, Logging, Provider-/Modellauswahl und Datenschutzpruefung vorsehen.
+  - sensible Inhalte nur mit expliziter Freigabe ueber externe Provider schicken.
+  - keine alten LocalAI-/Swarm-/DietPi-Annahmen aus der Fruehplanung uebernehmen.
+  - Dummy-Services aus der alten Planung sind Platzhalter, keine Infrastruktur.
+
 ## Hermes-Agent Steuerdateien
 
 - Quelle: Medium-PDF `OpenClaw Automation- The 30 Prompts and Instructions Guide`

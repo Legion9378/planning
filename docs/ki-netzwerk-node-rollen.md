@@ -9,8 +9,8 @@ Diese Datei ist der aktuelle Planungsstand fuer die Rollen der vorhandenen Netzw
 - Unter 16 GB RAM wird vorerst kein Modellrunner geplant.
 - Kleine Geraete koennen Orchestrierung, Tools, Storage oder Dienste uebernehmen, aber keine produktive lokale LLM-Inference.
 - Tailscale und GitHub funktionieren fuer den Start ausreichend; lokales Gitea ist optional und keine Startvoraussetzung.
-- DietPi ist verworfen, weil die stark reduzierte Distribution bei Netzwerkfreigaben/NFS praktisch Probleme verursacht hat.
-- Netzwerkfreigaben muessen Schreib-/Leserechte verlaesslich abbilden, bevor sie fuer produktive Workflows eingeplant werden.
+- DietPi ist verworfen, weil die stark reduzierte Distribution in Björns Test bei Netzwerkfreigaben/NFS praktische Rechteprobleme verursacht hat.
+- NFS ist dadurch nicht grundsaetzlich verworfen; Netzwerkfreigaben muessen aber unter der tatsaechlichen Ziel-Distribution Schreib-/Leserechte verlaesslich abbilden, bevor sie fuer produktive Workflows eingeplant werden.
 
 ## Aktuelle Node-Rollen
 
@@ -51,4 +51,3 @@ Diese Datei ist der aktuelle Planungsstand fuer die Rollen der vorhandenen Netzw
 - LocalAI-Swarm oder Delegation zwischen diesen Kleingeraeten ist verworfen.
 - Automatische DietPi-Wartungsroutinen sind irrelevant, weil DietPi nicht weiter genutzt wird.
 - Lokales Gitea bleibt optional; GitHub plus Tailscale reicht fuer den Einstieg.
-
