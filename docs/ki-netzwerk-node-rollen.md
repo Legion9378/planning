@@ -12,7 +12,7 @@ Hardware- und OS-Details stehen in `docs/hardware-und-os-stand.md`.
 - Kleine Geraete koennen Orchestrierung, Tools, Storage oder Dienste uebernehmen, aber keine produktive lokale LLM-Inference.
 - Tailscale und GitHub funktionieren fuer den Start ausreichend; lokales Gitea ist optional und keine Startvoraussetzung.
 - DietPi ist verworfen, weil die stark reduzierte Distribution in Björns Test bei Netzwerkfreigaben/NFS praktische Rechteprobleme verursacht hat.
-- NFS ist dadurch nicht grundsaetzlich verworfen; Netzwerkfreigaben muessen aber unter der tatsaechlichen Ziel-Distribution Schreib-/Leserechte verlaesslich abbilden, bevor sie fuer produktive Workflows eingeplant werden.
+- NFS gehoert zur alten DietPi-Zeitlinie und wird fuer die aktuellen KI-/Content-Workflows nicht eingeplant. Austausch, Taskfluss und Versionierung laufen stattdessen ueber GitHub/Tailscale, optional Gitea und MCP-nahe Dienste.
 
 ## Aktuelle Node-Rollen
 

@@ -22,6 +22,8 @@
 - Historischer Bezug: Unter Windows XP funktionierte bereits ein Workflow mit `Text-to-Speech 3`, MP3-Ausgabe und optional ruhiger Hintergrundmusik.
 - Mehrstimmige Dialoge bleiben als spaetere Formatidee erhalten. Dafuer braucht der Text klare Dialog-/Voice-Marker, statt manuell aus Chat-Apps kopiert zu werden.
 - Zielpfad: Storytext -> Audiobook-Skript -> TTS/Mehrstimmen-Ausgabe -> Mixing -> optionales Video mit bis zu drei Hosts/Lesenden.
+- Piper, Coqui und weitere TTS-Loesungen bleiben Testkandidaten. Coqui wird nicht automatisch ausgeschlossen, aber als Wartungsrisiko markiert, weil es seit einiger Zeit nicht mehr aktiv weiterentwickelt wird.
+- Der Mac Mini ist nicht als TTS-Host eingeplant; er bleibt fuer OpenCode und Agent Brain im KI-Netzwerk reserviert.
 
 ## 3. Video Production
 - Avatar-Bild (sitzend im Sessel)
