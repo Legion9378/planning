@@ -18,6 +18,10 @@
   - Lokale Lösungen (Piper TTS, StyleTTS 2, Tortoise-TTS)
   - Online (ElevenLabs - sehr gute Qualität, Clone-Funktion)
   - Später: Direkter Aufruf über KI-Netzwerk
+- TTS muss nicht zwingend KI-basiert sein. Entscheidend ist ein brauchbarer Audiobook-Workflow mit Dateiausgabe, Deutsch/Englisch und spaeterer Konvertierbarkeit.
+- Historischer Bezug: Unter Windows XP funktionierte bereits ein Workflow mit `Text-to-Speech 3`, MP3-Ausgabe und optional ruhiger Hintergrundmusik.
+- Mehrstimmige Dialoge bleiben als spaetere Formatidee erhalten. Dafuer braucht der Text klare Dialog-/Voice-Marker, statt manuell aus Chat-Apps kopiert zu werden.
+- Zielpfad: Storytext -> Audiobook-Skript -> TTS/Mehrstimmen-Ausgabe -> Mixing -> optionales Video mit bis zu drei Hosts/Lesenden.
 
 ## 3. Video Production
 - Avatar-Bild (sitzend im Sessel)
