@@ -45,6 +45,10 @@ Jeder neue Artikel oder Toolvorschlag muss zusaetzlich durch den Low-Budget-/CPU
   - Passt der Dienst auf vorhandene Hardware, ohne den Modellbetrieb zu blockieren?
   - Kann er spaeter sauber hinter Interface, Queue oder Toolserver betrieben werden?
   - Sind API, Queueing, Fehlerbehandlung und Rechte-/Pfadmodell fuer Hermes-Agent nutzbar?
+  - Lassen sich Seed, Aufloesung, Face-Fix/GFPGAN, Sampler und Steps reproduzierbar testen?
+  - Werden mehrere Varianten als Batch/mehrere Generierungen statt als Mehrfachmotiv in einem Bild erzeugt?
+- Nicht als aktiver Pfad:
+  - AirLLM-/Layerstreaming-Ideen fuer Bildmodelle aus der fruehen Chat-History.
 
 ### DeepGen 1.0
 
