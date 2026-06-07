@@ -120,6 +120,18 @@ Aktuelle Hardware- und Node-Rollen stehen in `docs/ki-netzwerk-node-rollen.md`. 
   - keine alten LocalAI-/Swarm-/DietPi-Annahmen aus der Fruehplanung uebernehmen.
   - Dummy-Services aus der alten Planung sind Platzhalter, keine Infrastruktur.
 
+## Mobile Git / Working Copy
+
+- Quelle: Chat-History `chatgpt-webserver-und-ki-netzwerk---working-copy-ios-app`
+- Status: verworfen.
+- Grund:
+  - Working Copy ermoeglicht lokalen Git-Workflow wie Bearbeiten und Committen.
+  - Wichtige Repo-Admin-Aktionen wie ueberfluessige Repositories loeschen muessen trotzdem ueber die GitHub-Weboberflaeche laufen.
+  - Damit loest Working Copy nicht das eigentliche Ziel, GitHub-Verwaltung am iPad ohne Weboberflaeche abzudecken.
+- Regel:
+  - Mobile Git-Clients werden nur wieder geprueft, wenn sie die benoetigten Admin-Aktionen oder eine saubere Alternative dazu bieten.
+  - Bis dahin: Repo-Administration ueber GitHub-Weboberflaeche oder geeigneten Codex/GitHub-Workflow.
+
 ## Hermes-Agent Steuerdateien
 
 - Quelle: Medium-PDF `OpenClaw Automation- The 30 Prompts and Instructions Guide`
