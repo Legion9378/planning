@@ -124,6 +124,26 @@ Jeder neue Artikel oder Toolvorschlag muss zusaetzlich durch den Low-Budget-/CPU
   - RWKV/RNN nur als Low-RAM-/Long-Context-/Spezialhardware-Pruefkontext fuehren, nicht als gesetztes Modell.
   - Rockchip-NPU und Coral Dual TPU sind Pruefkontexte, keine bestaetigte Beschleunigungsstrategie.
 
+## Closed-Loop-Jobflow und Snapshot-Pattern
+
+- Quelle: Chat-History `chatgpt-architekturvergleich-und-entwurf`.
+- Status: Architekturpattern, kein OpenClaw-/Vercel-/Supabase-Stack.
+- Uebernehmen:
+  - Proposal, Policy/Approval, Mission, Steps, Worker, Event, Trigger/Reaction und Heartbeat als Denkmodell fuer Jobflows.
+  - Active Tables als volatile Runtime-Flaeche.
+  - Snapshots in Persistent Memory, nicht dauerhaft in Active Tables.
+  - Double-Buffer-/Ping-Pong-Prinzip: inaktives Set schreiben, validieren, umschalten, altes Set erst danach loeschen.
+  - Knowledge Graph oder spaetere Graph-/Vector-Schichten erst nach erfolgreichem Commit aktualisieren.
+- Nicht uebernehmen:
+  - Pi400 als gesetzter Persistent-Memory-Core.
+  - PageIndex.
+  - NanoCluster, Jasper, SHIMMY oder fruehe N4000-Rollen als aktuelle Zielarchitektur.
+- Namensregel:
+  - `BMAX B1`/`BMAX B1 Pro`/`N4000` ist der 8-GB-Tool-/FalkorDB-Kandidat.
+  - `BMAX B6 Pro`/`i5-1030NG7` ist ein getrennter 16-GB-Modellserver-Kandidat.
+  - `Jasper` meint den N5105-Toolserver.
+  - Pi400 hat aktuell keine feste Rolle.
+
 ## Hermes-Agent Vergleichsquelle OpenClaw
 
 - Quelle: Medium-PDF `How OpenClaw Works`

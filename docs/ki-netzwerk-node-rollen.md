@@ -36,18 +36,27 @@ Hardware- und OS-Details stehen in `docs/hardware-und-os-stand.md`.
 - Keine aktive KI-Rolle.
 - Keine Delegations-/Worker-Rolle aus den fruehen LocalAI-Planungen uebernehmen.
 
-### BMAX B1 Pro / N4000
+### BMAX B1 Pro / BMAX B1 / N4000
 
 - Rolle: Toolserver und moeglicher Datenbankserver.
 - 8 GB RAM.
+- Zur eindeutigen Abgrenzung vom BMAX B6 Pro entweder als `BMAX B1`, `BMAX B1 Pro` oder ueber den Prozessor `N4000` benennen.
 - Kandidat fuer spaetere Datenbankschichten, insbesondere falls FalkorDB fuer Graph plus Vector produktiv gebraucht wird.
 - Keine GPU-/LocalAI-Bildworker-Annahme aus der fruehen Planung uebernehmen.
 - Kein Modellrunner unter aktueller RAM-Regel.
 
-### Intel N5105
+### BMAX B6 Pro / Intel i5-1030NG7
+
+- Rolle: Modellserver-Kandidat.
+- 16 GB RAM.
+- Getrennt vom BMAX B1/N4000 fuehren.
+- Konkrete Nutzung erst nach Pruefung von Runner, RAM-Verbrauch, Geschwindigkeit, Stromkosten, Kuehlung und Wartbarkeit.
+
+### Intel N5105 / Jasper
 
 - Rolle: Toolserver.
 - 8 GB RAM.
+- `Jasper` bezeichnet diesen Rechner wegen Jasper-Lake-Generation.
 - Keine Haupt-KI und kein Modellrunner unter aktueller RAM-Regel.
 - Aufgaben muessen als leichte Dienste, Tools, Bridge, Queue-Hilfen oder andere nicht-inferenzlastige Funktionen geplant werden.
 

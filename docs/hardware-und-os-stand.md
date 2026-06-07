@@ -36,18 +36,26 @@ Diese Datei sammelt den aktuellen Hardware- und Betriebssystemstand. Aeltere Cha
 - Ubuntu 22.04 bleibt installiert.
 - Grund: vorinstallierte und zusaetzlich installierte Tools fuer die Rockchip-NPU.
 
-### BMAX B1 Pro / N4000
+### BMAX B1 Pro / BMAX B1 / N4000
 
 - 8 GB RAM.
 - In fruehen Chat-History-Dateien teilweise als `N4000-Node` beschrieben.
+- Zur eindeutigen Abgrenzung vom BMAX B6 Pro entweder als `BMAX B1`, `BMAX B1 Pro` oder ueber den Prozessor `N4000` benennen.
 - Aktuelle Rolle: Toolserver und moeglicher Datenbankserver.
 - Zielkandidat fuer FalkorDB, falls Graph plus Vector spaeter produktiv gebraucht wird.
 - Kein Modellrunner unter aktueller RAM-Regel.
 
-### Intel N5105
+### BMAX B6 Pro / Intel i5-1030NG7
+
+- 16 GB RAM.
+- Separat vom BMAX B1/N4000.
+- Wurde als Modellserver-Kandidat angesprochen.
+- Konkrete Modellrunner-Rolle muss spaeter gegen Stromverbrauch, RAM, Runner, Geschwindigkeit und Wartung geprueft werden.
+
+### Intel N5105 / Jasper
 
 - 8 GB RAM.
-- Wird allgemein `N5105` genannt.
+- Wird allgemein `N5105` oder `Jasper` genannt, weil die CPU-Generation Jasper Lake ist.
 - Aktuelle Rolle: Toolserver.
 - Kein Modellrunner unter aktueller RAM-Regel.
 
