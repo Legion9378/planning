@@ -103,6 +103,7 @@ Aktuelle Hardware- und Node-Rollen stehen in `docs/ki-netzwerk-node-rollen.md`. 
 - Quelle: Medium-PDF `How OpenClaw Works`
 - Rolle: Vergleichsquelle fuer Gateway, Sessions, Skills, Context Assembly und Memory-on-demand.
 - Status: Architekturvergleich, keine Software-Infrastruktur.
+- Korrektur: Spaetere OpenClaw-/Tree-KG-Chatplanungen setzen keine Zielkomponente. Tree-KG wird durch LLM-Wiki plus spaeter ggf. FalkorDB ersetzt.
 - Nicht uebernehmen:
   - OpenClaw als Produkt.
   - Community-Skill-Registry als Vertrauensquelle.
