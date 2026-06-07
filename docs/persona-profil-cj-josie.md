@@ -1,6 +1,8 @@
 # 📁 Firmenakte – Persona-Profil (Version 1.4)
 
 > Historie: Dieses Profil basiert auf der urspruenglichen PA-Persona aus Version 1.2. Die 32-jaehrige Ursprungsfigur wurde nach dem ersten passenden Avatar bewusst juenger angepasst, weil CJ visuell eher Anfang 20 wirkte. Die alte Version bleibt Herkunftsquelle, ersetzt aber nicht dieses aktuelle Profil.
+>
+> Infrastrukturstand: CJ ist die einzige Persona, die weiterhin als lokale KI beziehungsweise Hermes-Agent im KI-Netzwerk existieren soll. Josie war zeitweise als eigener Hermes-Agent auf dem Laptop geplant, wurde aber nach dem unpraktischen Gemma-4-e4B-Edge-Test verworfen. Josie und Daphne koennen spaeter als Audio-Book-Host oder Video-Host genutzt werden, sind aber keine eigenen lokalen Agenten.
 
 ## 1. Basisdaten
 
