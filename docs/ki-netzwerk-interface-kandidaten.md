@@ -208,6 +208,18 @@ Aktuelle Hardware- und Node-Rollen stehen in `docs/ki-netzwerk-node-rollen.md`. 
   - keine Secrets in Skills.
   - Tool- und Shop-Aktionen nur mit Rechte-, Draft- und Audit-Regeln.
 
+### Claude-Skills / LLMWiki
+
+- Quelle: Chat-History `chatgpt-erinnerung-zu-ideen`
+- Status: direkt integrierbarer Skill-Layer laut Bjoerns Korrektur zur Readme, keine Grundsatzanalyse noetig.
+- Ziel:
+  - LLMWiki-Skills fuer LLM-Wiki nutzbar machen.
+  - Skills fuer OpenCode, Codex und Hermes-Agent wiederverwendbar halten.
+  - Einbindung ueber Rechte, Discovery, Versionierung, Review und Jobflow-/Memory-Anbindung planen.
+- Nicht uebernehmen:
+  - OpenCode-Ersatz.
+  - ungepruefte Toolrechte oder Secrets in Skills.
+
 ## Hermes-Agent CEO und Jobflow-Firma
 
 - Quelle: Medium-PDF `Paperclip AI`
@@ -217,6 +229,7 @@ Aktuelle Hardware- und Node-Rollen stehen in `docs/ki-netzwerk-node-rollen.md`. 
   - Hermes-Agent ist CEO.
   - einzelne Jobflows sind spezialisierte Firmenarme.
   - jeder Firmenarm bekommt eigene Agentensteuerung, Regeln, State und Artefaktorte.
+  - Paperclip reicht als Software nicht aus, weil das Ziel mehrere Jobflow-Firmenarme unter einem zentralen CEO braucht.
 - Hardware-Regel:
   - kein ungezaehmter Parallelbetrieb auf schwacher Hardware.
   - sequenzieller Parallelismus ueber Warteschlange.
