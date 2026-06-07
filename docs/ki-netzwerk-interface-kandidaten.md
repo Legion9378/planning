@@ -158,6 +158,21 @@ Aktuelle Hardware- und Node-Rollen stehen in `docs/ki-netzwerk-node-rollen.md`. 
   - Vor Docker-/Compose-Planung pruefen: Image existiert, Tags existieren, Pull funktioniert, Dockerfile oder Build-Anleitung ist aktuell.
   - Leere go-skynet-/Quay-Repos sind Warnsignal und keine Architekturgrundlage.
 
+## Story-KI Rollenmodell
+
+- Quelle: Chat-History `chatgpt-webserver-und-ki-netzwerk---ki-fur-geschichten-und-horbucher`
+- Status: Architekturprinzip aus historischer Fruehplanung.
+- Kontext:
+  - Die Datei gehoert zum anfaenglichen Hardware-Aufbau fuer lokale KI, die Stories automatisiert oder semi-automatisiert erstellen sollte.
+  - Konkrete damalige Hardwareannahmen werden nicht als aktuelles Runbook uebernommen.
+- Regeln:
+  - Story-KI nicht als einzelnes Modell planen.
+  - Control Plane, Modelrunner, Lore-/Memory-/RAG-Kontext, Schreibprozess, State-Speicherung und Review getrennt halten.
+  - Hardware unter 16 GB RAM nicht als Haupt-KI oder Modelrunner einplanen.
+  - Pi5 hoechstens als Orchestrator-, Tool- oder Hilfsrolle betrachten.
+  - `LocalAGI` nur historisch lesen; aktuelle Planung fasst die alte LocalAI-/LocalAGI-/LocalRecall-Familie als `LocalAI` zusammen.
+  - Story-Output braucht Review- und Freigabepunkte, bevor Automatisierung oder Publikation angeschlossen werden.
+
 ## Hermes-Agent Steuerdateien
 
 - Quelle: Medium-PDF `OpenClaw Automation- The 30 Prompts and Instructions Guide`
