@@ -1,0 +1,59 @@
+# Hardware und OS-Stand
+
+Stand: 2026-06-07
+
+Diese Datei sammelt den aktuellen Hardware- und Betriebssystemstand. Aeltere Chat-History-Dateien koennen Schreibfehler, alte RAM-Werte, alte Rollen oder veraltete OS-Annahmen enthalten.
+
+## Aktuelle Arbeitsgeraete und Nodes
+
+### HP EliteBook 830 G6
+
+- Aktueller Laptop, auf dem Codex betrieben wird.
+- Wurde urspruenglich mit 16 GB RAM verkauft.
+- Ist mittlerweile auf 32 GB RAM aufgeruestet.
+- Die interne SSD ist ausgefallen.
+- Aktuelle Systemplatte: externe USB-HDD mit 2 TB.
+- Calibre muss wieder installiert werden; Nutzung erfolgt als GUI-Tool.
+
+### Mac Mini Late 2012
+
+- Kein NAS.
+- Geplante Rolle: OpenCode und Agent Brain beziehungsweise Code-RAG-/Tool-Zusatz.
+- RAM: von 4 GB auf das Maximum 16 GB aufgeruestet.
+- Interner Speicher: vermutlich 2x 4 TB SATA SSD.
+- Nicht Metal-faehig; keine Exo-/MLX-/Apple-Silicon-Rolle.
+
+### iPad Air 5. Generation
+
+- M1-Chip.
+- RAM: standardmaessig 8 GB.
+- Speichergoesse aktuell nicht sicher notiert.
+- Relevant fuer iPad-Workflows wie GarageBand, iMovie, Dateiaustausch und mobile Arbeit.
+
+### RK3588-Rechner
+
+- 8 GB RAM.
+- Ubuntu 22.04 bleibt installiert.
+- Grund: vorinstallierte und zusaetzlich installierte Tools fuer die Rockchip-NPU.
+
+### Lokaler Webserver
+
+- Soll spaeter veroeffentlicht werden.
+- Laeuft unter YunoHost.
+- Keine KI-Instanz.
+- Kein Ubuntu-/Xubuntu-Zielsystem.
+
+## OS-Regel
+
+- Soweit nicht anders notiert, laufen die Ubuntu-Server- und Xubuntu-Systeme auf 26.04.
+- Ausnahmen:
+  - RK3588-Rechner bleibt auf Ubuntu 22.04 wegen Rockchip-NPU-Tools.
+  - lokaler Webserver laeuft unter YunoHost.
+
+## Veraltete Annahmen
+
+- `HP EliteBook 820` war ein laengerer Schreibfehler; gemeint ist das HP EliteBook 830 G6.
+- Mac Mini als NAS ist ueberholt.
+- Alte 4-GB-RAM-Angaben fuer den Mac Mini sind ueberholt.
+- Xubuntu/Ubuntu-Server-24.04-Annahmen aus aelteren Chat-History-Dateien sind nicht der aktuelle Standard.
+

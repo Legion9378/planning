@@ -4,6 +4,8 @@ Stand: 2026-06-07
 
 Diese Datei ist der aktuelle Planungsstand fuer die Rollen der vorhandenen Netzwerkgeraete. Aeltere Chat-History-Dateien koennen fruehere Annahmen enthalten und duerfen nicht ohne diese Korrekturen als Zielarchitektur gelesen werden.
 
+Hardware- und OS-Details stehen in `docs/hardware-und-os-stand.md`.
+
 ## Grundregeln
 
 - Unter 16 GB RAM wird vorerst kein Modellrunner geplant.
@@ -44,6 +46,21 @@ Diese Datei ist der aktuelle Planungsstand fuer die Rollen der vorhandenen Netzw
 
 - Aktuell keine feste Rolle.
 - Fruehere Audio-/TTS- oder Worker-Rollen bleiben verworfen oder offen, bis eine neue Aufgabe definiert wird.
+
+### Mac Mini Late 2012
+
+- Kein NAS.
+- RAM mittlerweile auf 16 GB aufgeruestet.
+- Interner Speicher vermutlich 2x 4 TB SATA SSD.
+- Geplante Rolle: OpenCode und Agent Brain beziehungsweise Code-RAG-/Tool-Zusatz.
+- Keine Modellrunner-Pflicht und keine Exo-/MLX-Rolle.
+
+### HP EliteBook 830 G6
+
+- Aktueller Laptop und Codex-Arbeitsgeraet.
+- 32 GB RAM.
+- Interne SSD ausgefallen; aktuelle Systemplatte ist eine externe USB-HDD mit 2 TB.
+- Calibre muss wieder als GUI-Tool installiert werden.
 
 ## Verworfen / offen
 
