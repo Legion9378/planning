@@ -39,11 +39,13 @@ Diese Datei sammelt den aktuellen Hardware- und Betriebssystemstand. Aeltere Cha
 ### BMAX B1 Pro / BMAX B1 / N4000
 
 - 8 GB RAM.
+- Systemdisk: ca. 370-380 GB.
 - In fruehen Chat-History-Dateien teilweise als `N4000-Node` beschrieben.
 - Zur eindeutigen Abgrenzung vom BMAX B6 Pro entweder als `BMAX B1`, `BMAX B1 Pro` oder ueber den Prozessor `N4000` benennen.
 - Aktuelle Rolle: Toolserver und moeglicher Datenbankserver.
 - Zielkandidat fuer FalkorDB, falls Graph plus Vector spaeter produktiv gebraucht wird.
 - Kein Modellrunner unter aktueller RAM-Regel.
+- Alte Angaben von ca. 470-480 GB Systemdisk waren eine fehlerhafte Erkennung und sind verworfen.
 
 ### BMAX B6 Pro / Intel i5-1030NG7
 

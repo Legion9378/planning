@@ -40,10 +40,12 @@ Hardware- und OS-Details stehen in `docs/hardware-und-os-stand.md`.
 
 - Rolle: Toolserver und moeglicher Datenbankserver.
 - 8 GB RAM.
+- Systemdisk: ca. 370-380 GB.
 - Zur eindeutigen Abgrenzung vom BMAX B6 Pro entweder als `BMAX B1`, `BMAX B1 Pro` oder ueber den Prozessor `N4000` benennen.
 - Kandidat fuer spaetere Datenbankschichten, insbesondere falls FalkorDB fuer Graph plus Vector produktiv gebraucht wird.
 - Keine GPU-/LocalAI-Bildworker-Annahme aus der fruehen Planung uebernehmen.
 - Kein Modellrunner unter aktueller RAM-Regel.
+- PageIndex-Speicherplanung aus fruehen Dateien ist verworfen.
 
 ### BMAX B6 Pro / Intel i5-1030NG7
 

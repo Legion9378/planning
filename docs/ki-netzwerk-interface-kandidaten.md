@@ -28,11 +28,13 @@ Jeder neue Artikel oder Toolvorschlag muss zusaetzlich durch den Low-Budget-/CPU
 - Quelle: <https://github.com/mudler/skillserver>
 - Rolle: moeglicher Werkzeugkanal fuer KI-Netzwerk und Interface.
 - Status: Analyse-Kandidat.
+- Einordnung: Mudler-Projekt aus demselben Umfeld wie LocalAI; MCP-aehnlicher Skill-Dienst, der Skills bereitstellen soll, ohne dass die KI diese selbst installieren muss.
 - Prueffragen:
   - Kann SkillServer Skripte und Tools stabil im lokalen Netzwerk bereitstellen?
   - Passt die Architektur zu Hermes-Agent, lokalen Modellservern und spaeteren Worker-Nodes?
   - Laesst sich der Einsatz ohne unnoetige Node.js-/npm-Abhaengigkeit betreiben?
   - Gibt es ein brauchbares Rechte-, Isolation- und Logging-Modell?
+  - Kann er Skills als kontrollierte Tool-Schicht bereitstellen, ohne Workflow-Steuerung oder State-Authority zu uebernehmen?
 
 ### fastsdcpu
 
