@@ -144,6 +144,37 @@ Jeder neue Artikel oder Toolvorschlag muss zusaetzlich durch den Low-Budget-/CPU
   - `Jasper` meint den N5105-Toolserver.
   - Pi400 hat aktuell keine feste Rolle.
 
+## Agentic Project Workflow Generator
+
+- Quelle: Chat-History `chatgpt-artikel-lesen-und-umsetzen`.
+- Status: fest geplant, noch nicht implementieren.
+- Zweck:
+  - Project Workflows aus generischen Workflow Templates erzeugen.
+  - Project Workflows versioniert im Projekt speichern.
+  - normale Jobausfuehrung von Workflow-Erstellung trennen.
+- Ablauf:
+  - Interface nimmt Björns Auftrag entgegen.
+  - Interface-Modell nutzt Routing-Tabelle fuer Anwendungsfall und Zielmodell.
+  - passender Reasoner liest Workflow Templates und Prompt Templates.
+  - Reasoner erzeugt Project Workflow aus Vorlage und Projektvorgaben.
+  - Project Memory wird bei Neuanlage nicht automatisch gelesen.
+  - Project Memory wird nur bei Aenderung, Fortsetzung oder Reparatur bestehender Project Workflows genutzt.
+- Rollen:
+  - Story-/NSFW-Reasoner fuer Hauptstory, weitere NSFW-Storyflows und Rewrite-Regeln zu PG-13, PG-16 oder spaeter festgelegter Zielstufe.
+  - Standard-Reasoner fuer allgemeine Project Workflows.
+  - Coding-Reasoner wie Fireball oder spaeterer Ersatz fuer OpenCode-/Coding-Workflows.
+- Review:
+  - Kritischer Reviewer und Retry-Loop sind Teil des Jobflows.
+  - Ein externer Supervisor ist keine Pflichtschicht.
+  - Eskalation erst, wenn die definierte Loop-Grenze erreicht ist und das Ergebnis weiter nicht passt.
+- Nicht uebernehmen:
+  - `execution_profiles`.
+  - Chroma als Zielkomponente.
+  - Claude-Code-Hooks als direkte Architektur.
+- Laufzeitregel:
+  - Standard bleibt: bis zu 2 Stunden Arbeit, State speichern, Modell/schwere Ressourcen entladen, 10-20 Minuten Pause.
+  - Laptop-/Buerojobs duerfen engere Loop-Regeln im jeweiligen Jobflow selbst bekommen.
+
 ## Hermes-Agent Vergleichsquelle OpenClaw
 
 - Quelle: Medium-PDF `How OpenClaw Works`
