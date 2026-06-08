@@ -198,6 +198,25 @@ Jeder neue Artikel oder Toolvorschlag muss zusaetzlich durch den Low-Budget-/CPU
   - keine alten LocalAI-/Swarm-/DietPi-Annahmen aus der Fruehplanung uebernehmen.
   - Dummy-Services aus der alten Planung sind Platzhalter, keine Infrastruktur.
 
+### Hybrid-Coding-Loop mit OpenCode
+
+- Quelle: Chat-History `chatgpt-artikelanalyse-modellbewertung`.
+- Status: moegliche spaetere Planung, eingefroren bis OpenCode-Installation und lokale Modelltests.
+- Idee:
+  - Remote-Mix ueber OpenRouter als Denk-, Planungs-, Review- und Risiko-Schicht.
+  - lokale Modelle als Writer fuer Code, Fixes und Tests, falls sie im KI-Netzwerk gut genug laufen.
+  - OpenCode als Runtime fuer Tests.
+- Grenzen:
+  - Remote schreibt nicht, patcht nicht, erzeugt keine Tests und beeinflusst Runtime nicht direkt.
+  - Konsolidierung muss deterministisch sein.
+  - Remote-Veto nur fuer Architektur-/Security-Fragen.
+- Phase 7:
+  - Fehler im Test fuehrt nicht blind zurueck zur kompletten Planung.
+  - Syntax/kleine Logik: Fix-Plan.
+  - falsche Annahme: Review.
+  - Architekturbruch: Planung.
+  - wiederholter gleicher Fehler: Remote-Arbitration oder Eskalation.
+
 ## Mobile Git / Working Copy
 
 - Quelle: Chat-History `chatgpt-webserver-und-ki-netzwerk---working-copy-ios-app`
