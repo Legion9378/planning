@@ -68,6 +68,8 @@ Hardware- und OS-Details stehen in `docs/hardware-und-os-stand.md`.
 - 8 GB RAM.
 - Bleibt auf Ubuntu 22.04 wegen Rockchip-NPU-Tools.
 - NPU ist ein Pruefkontext fuer Spezialaufgaben, aber keine gesetzte LLM-/RWKV-/RNN-Beschleunigung.
+- Konkrete Audio-Aufgaben wie Wake Word, kleine Audio-Klassifikation, Feature Extraction oder Preprocessing werden erst nach praktischer Pruefung der vorhandenen NPU-Tools eingeplant.
+- Kein gesetzter STT-, TTS-, LLM- oder Voice-Node.
 
 ### Pi400
 
