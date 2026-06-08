@@ -83,6 +83,12 @@ Jeder neue Artikel oder Toolvorschlag muss zusaetzlich durch den Low-Budget-/CPU
 - Fallback-Kandidat: Qwen 3.5 oder Qwen 3.6 bis 9B, falls Gemma4-e4B Probleme macht.
 - Zusaetzlicher Testkandidat: Gemma4 12B Midrange.
 - Pruefzeitpunkt: Q4.
+- Standard-Chatmodell-Sprachregel:
+  - Diese Rolle ist kein Testplatzhalter, sondern der dauerhafte UI/API-Standard.
+  - Ziel ist DE/EN-Stabilitaet mit Denglisch-Toleranz, keine aggressive Multilingualitaet.
+  - Sprachdrift darf hoechstens Richtung Englisch gehen; Italienisch, Franzoesisch, Spanisch oder andere Sprachen sind fuer Normalantworten Ausschlussgrund.
+  - Regionale Sprach-Fine-Tunes wie `-it`, `-fr` oder `-es` sind fuer diese Rolle ungeeignet.
+  - Wenn die LocalAI-Gallery kein passendes Modell liefert, wird diese Rolle in die Hugging-Face-/Phase-2-Auswahl verschoben.
 - Aktuelle Laptop-Grenze:
   - 32 GB RAM reichen nicht automatisch fuer produktiven lokalen KI-Betrieb, wenn Browser, Codex, Editor, Docker-Dienste und andere Programme parallel laufen.
   - Gemma4-e4B unter Ollama war auf dem Laptop bei einzelnen Auftraegen mit bis zu fuenf Stunden Laufzeit nicht als interaktiver Hermes-Agent-Arbeitsmotor brauchbar.
