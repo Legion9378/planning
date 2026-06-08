@@ -11,6 +11,7 @@ Hardware- und OS-Details stehen in `docs/hardware-und-os-stand.md`.
 - Unter 16 GB RAM wird vorerst kein Modellrunner geplant.
 - Kleine Geraete koennen Orchestrierung, Tools, Storage oder Dienste uebernehmen, aber keine produktive lokale LLM-Inference.
 - Tailscale und GitHub funktionieren fuer den Start ausreichend; lokales Gitea ist optional und keine Startvoraussetzung.
+- DDNS ist kein aktueller Zielweg fuer externen Zugriff; spaeter Tailscale Funnel pruefen.
 - DietPi ist verworfen, weil die stark reduzierte Distribution in Björns Test bei Netzwerkfreigaben/NFS praktische Rechteprobleme verursacht hat.
 - NFS gehoert zur alten DietPi-Zeitlinie und wird fuer die aktuellen KI-/Content-Workflows nicht eingeplant. Austausch, Taskfluss und Versionierung laufen stattdessen ueber GitHub/Tailscale, optional Gitea und MCP-nahe Dienste.
 
