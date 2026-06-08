@@ -372,6 +372,18 @@ Jeder neue Artikel oder Toolvorschlag muss zusaetzlich durch den Low-Budget-/CPU
   - GPT-OSS-20B/vLLM als Zielsetup.
   - Proxy-/Tor-/Public-Exposure-Komplexitaet fuer den lokalen Standardbetrieb.
 
+### Interface v1 Search Provider
+
+- Quelle: Chat-History `chatgpt-artikelzusammenfassung-open-coreui`.
+- Status: geplant als Interface-v1-Option, keine aktuelle Implementierung.
+- Einordnung:
+  - `web_search` ist ein Modell-Tool aus der Tool Registry, keine UI-Suche.
+  - Das Tool wird nur aktiv, wenn ein Provider in den Einstellungen aktiviert und konfiguriert ist.
+  - Einstellungen: aktiv/inaktiv, Provider- oder Base-URL, Query-Template, Timeout, maximale Trefferzahl.
+  - Provider bleiben austauschbar: deaktiviert, SearXNG oder custom URL.
+  - Keine Docker-Pflicht fuer den Provider festschreiben.
+  - Suchergebnisse muessen strukturiert und begrenzt in den Modellkontext uebergeben werden.
+
 ## Embedding-Testkandidat Model2Vec
 
 - Quelle: Medium-PDF `Make Sentence Transformers 50x Smaller and 500x Faster with Model2Vec`
