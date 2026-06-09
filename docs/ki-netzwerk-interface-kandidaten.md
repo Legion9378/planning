@@ -487,6 +487,33 @@ Jeder neue Artikel oder Toolvorschlag muss zusaetzlich durch den Low-Budget-/CPU
   - React bleibt moeglich, wenn echte Client-Komplexitaet entsteht.
   - Website-Repo soll nach Einrichtung eines eigenen GitHub-Remotes in den Local-git-Sync aufgenommen werden.
 
+
+
+## Auth-System mit Rotorcipher-Pepper (Eigenes Design)
+
+- Quelle: Chat-History `chatgpt-enigma-funktionsweise-erklaeren-2026-05-07T01-23-00-308Z.md`
+- Rolle: Auth-Baustein für Website, KI-Netzwerk-Interface, Hermes-Agent-Control-Plane, LocalAI-Dashboard
+- Status: **Analyse-Kandidat** — **5 OFFENE BLOCKER** (siehe unten), KB-Seite existiert (`kb/password-rotor-pepper-pattern.md`), PHP+JS-Grundgerüst vorhanden
+- KB: `kb/password-rotor-pepper-pattern.md`, `content/notes/enigma-rotorcipher-passwort-sicherheit-besprechung.md`
+- Einordnung: Eigenes Passwort-Design — Rotorcipher (100 Rotoren + 4 Reflektoren) als fixer Pepper vor Argon2id, Webhosting-kompatibel (PHP 7.4+/8.x, Pure PHP), separate User/Admin-Encryption (25/50 Rotoren)
+
+### 🚫 BLOCKER (müssen gelöst sein vor Integration/Entscheidung)
+
+| # | Blocker | Beschreibung | Priorität |
+|---|---|---|---|
+| **B1** | **KDF/HMAC-Ableitung für Steps/Dirs** | Aktuell: unsicherer `srand(hexdec(substr(bin2hex(hash),0,8)))` Platzhalter in `rotor_preprocess_password()` → **muss ersetzt werden durch HMAC/KDF von Master-Key** (z.B. `hash_hmac('sha256', $seed, $master_key)`) | **KRITISCH** |
+| **B2** | **HMAC über Metadaten** | User/Admin-Encryption speichert Metadaten (IV, Steps, Dirs, Final-State) ohne Integritätsschutz → **Metadaten-Manipulation möglich** → HMAC mit Server-Secret nötig | **KRITISCH** |
+| **B3** | **Key-Rotation / Migration-Strategie** | Pepper-Wechsel = **alle Passwort-Hashes ungültig** → kein Migration-Pfad, keine Rotation, kein Rollback-Konzept → **muss vor Production gelöst sein** | **HOCH** |
+| **B4** | **Security-Audit der Rotor-Implementierung** | Eigenes Krypto-Design → **externe Review nötig** (Side-Channel, Timing, Alphabet-Handling, State-Management) → kein Production-Einsatz ohne Audit | **KRITISCH** |
+| **B5** | **WordPress-Plugin / Micro-Service Integration** | Konkreter Integrationspfad fehlt: `wp_hash_password`/`wp_check_password` Override via `mu-plugins` oder separater Micro-Service für KI-Netzwerk → **Entscheidung & Implementation nötig** | **HOCH** |
+
+### Weitere offene Punkte (nach Blocker-Lösung)
+- Admin-Key-Management: MFA, Zugriffsbegrenzung, Audit-Log, Backup-Strategie
+- Eignung für KI-Netzwerk: Hermes-Agent → LocalAI → User-Management, Session-Handling, Token-Refresh
+- Admin-Encryption (50 Rotoren) für System-Secrets, API-Keys, Config
+
+- **Nicht als gesetzter Standard**: Erst nach **ALLE 5 BLOCKER gelöst** + Security-Hardening (KDF, HMAC, Rotation) + Tests
+
 ## Gestrichene Punkte
 
 - Node.js-Vermeidung als feste Leitplanke ist hinfaellig.
