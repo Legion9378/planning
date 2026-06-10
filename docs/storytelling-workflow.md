@@ -60,3 +60,53 @@
 - Collector-Ergebnisse sind Input, keine automatisch uebernommene Wahrheit.
 
 Weitere Details werden ergänzt.
+
+## 7. Character-Style-Regel fuer Bildgenerierung
+
+- Quelle: Chat-History `chatgpt-fast-dllm-und-vision-modelle`.
+- Status: als Regel uebernommen.
+- KB-Verweis: `llm-wiki/kb/character-style-80s-cel-realistic-anatomy.md`.
+- Grundregel: Zeichentrickstil in der Linienfuehrung, reale Anatomie in den Proportionen.
+- Stilziel: 80er-Cel-Look mit frueher 90er-Anime-Influenz, aber ohne moderne Anime-Uebertreibung.
+- Normalstandard:
+  - realistische menschliche Proportionen;
+  - natuerliche Beinlaenge;
+  - ausgewogenes Torso-/Bein-Verhaeltnis;
+  - biologisch plausible Teen- und Erwachsenenentwicklung;
+  - keine ueberzogene Oberweite, Taille, Huefte, V-Form oder Superheldenmuskelung.
+- Crossover-Override:
+  - Marvel-/DC-/Superheldenkoerper sind nur erlaubt, wenn das Crossover explizit danach verlangt.
+  - Der Override ist Ausnahme, nicht Standard.
+- CPU-first-Hinweis:
+  - Realistischere, weniger extreme Proportionen gelten als bildgenerierungsfreundlicher, weil sie weniger extreme Schatten, Kanten und Koerpervolumen erzwingen.
+
+## 8. Content-Werkbank fuer Story, YouTube, Audiobook, Medium und Substack
+
+- Quelle: Chat-History `chatgpt-github-und-agenthub-integration`.
+- Status: als allgemeine Jobflow-Regel uebernommen.
+- Grundregel: Content-Creation nutzt eine semipersistente Werkbank mit Reviewer-Checks, keine technische Sandbox wie beim Coding.
+- Gilt fuer:
+  - Storywriting;
+  - YouTube-Skripte, Videostruktur, Titel/Thumbnail-/Beschreibungsvorbereitung;
+  - Audiobook-Skripte, TTS-Fassungen, Kapitel-/Szenenfassungen;
+  - Medium-Artikel;
+  - Substack-Posts und Newsletter.
+- Standardstruktur:
+  - `state.json` fuer Jobstatus, aktuellen Abschnitt, offene Punkte und Artefaktpfade;
+  - `brief/` fuer Auftrag, Zielgruppe, Plattform und Nicht-Ziele;
+  - `outline/` fuer Struktur, Hook, Kapitel/Sektionen, CTA;
+  - `drafts/` fuer versionierte Entwuerfe;
+  - `research/` fuer Quellen und Material;
+  - `analysis/` fuer Agentenanalysen;
+  - `reviewer_feedback/` fuer Stil-, Fakten-, Rechte-, Plattform- und Qualitaetschecks;
+  - `assets/` fuer Bilder, Audio, Thumbnails, Referenzen;
+  - `platform_exports/` fuer plattformspezifische Fassungen;
+  - `final/` fuer finalisierte Drafts.
+- Reviewer ersetzen die Sandbox:
+  - Story: Lore/Kanon, Stil, Ton, Kontinuitaet, Alters-/Content-Regeln.
+  - YouTube: Hook, Watchtime-Struktur, Kapitel, visuelle Hinweise, Beschreibung, Titel/Thumbnail-Fit.
+  - Audiobook: Sprecherrollen, TTS-Marker, Aussprache, Szenenlaenge, Audio-Tauglichkeit.
+  - Medium/Substack: These, Lesefluss, Quellen, Ueberschriften, CTA, Publikationsrisiko.
+- Reviewer liefern Feedback; Aenderungen passieren wieder in der Werkbank.
+- Finalisierung erzeugt Draft-/Publish-Artefakte, aber keine automatische Veroeffentlichung ohne Freigabe.
+

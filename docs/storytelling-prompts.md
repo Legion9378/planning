@@ -26,3 +26,28 @@ Write Scene 1: [kurze Beschreibung der Szene oder Fortsetzung der Geschichte]
 - 2. NSFW → SFW Umschreib-Prompt
 - 3. Übersetzungs-Prompt ins Deutsche
 - 4. E-Book Vorlage
+
+## Character-Style-Grundmodul: 80er-Cel-Look mit realer Anatomie
+
+Verweis: `llm-wiki/kb/character-style-80s-cel-realistic-anatomy.md`.
+
+Positive Basis:
+
+```text
+classic 80s cel animation style, early 90s anime influence, realistic human proportions, natural limb length, balanced torso to leg ratio, grounded anatomy, minimal stylization of body ratios, biologically plausible proportions
+```
+
+Negative Basis:
+
+```text
+long anime legs, doll proportions, tiny waist, exaggerated curves, oversized chest, extreme hourglass, heroic proportions, extreme musculature, bodybuilder, wide V-shape
+```
+
+Fix bei zu langen Beinen:
+
+```text
+standard human leg length ratio, realistic limb proportions, torso slightly longer than modern anime style
+```
+
+Regel: Superhelden-/Marvel-/DC-Proportionen nur bei explizitem Crossover-Override verwenden.
+

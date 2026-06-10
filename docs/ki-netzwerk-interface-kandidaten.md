@@ -1,6 +1,6 @@
 # KI-Netzwerk, Interface und Laptop: Kandidatenliste
 
-Stand: 2026-06-05
+Stand: 2026-06-09
 
 Diese Liste sammelt Kandidaten aus der Planungsnotiz `Fragen zu Artikeln die eine Verbesserung zu KI-Netz, verbundenem standalone Interface und Laptop sein koennen.md`.
 
@@ -182,6 +182,50 @@ Jeder neue Artikel oder Toolvorschlag muss zusaetzlich durch den Low-Budget-/CPU
 - Laufzeitregel:
   - Standard bleibt: bis zu 2 Stunden Arbeit, State speichern, Modell/schwere Ressourcen entladen, 10-20 Minuten Pause.
   - Laptop-/Buerojobs duerfen engere Loop-Regeln im jeweiligen Jobflow selbst bekommen.
+
+## Interface-Fallback und LoRA-Policy
+
+- Quelle: Chat-History `chatgpt-fahrmodus-und-hardware-stack`.
+- Status: Architekturentscheidung.
+- KB-Verweis: `llm-wiki/kb/interface-fallback-und-lora-policy.md`.
+- Entscheidung:
+  - CJ beziehungsweise die zentrale Interface-/Management-Schicht nutzt keine LoRAs.
+  - `SoulMD`, relevante Teile von `UserMD` und `AgentMD` bleiben Prompt-/Memory-/Steuerdatei-basiert.
+  - Grund: CJ muss auf externe Modelle wie ChatGPT/OpenRouter ausweichen koennen; externe Modelle unterstuetzen lokale LoRAs nicht.
+  - LoRA-Abhaengigkeiten in CJ wuerden beim Fallback Inkonsistenz erzeugen und Debugging erschweren.
+- Subagenten-Regel:
+  - Subagenten duerfen LoRAs nutzen, wenn sie lokal/spezialisiert laufen und kein identischer externer Fallback gefordert ist.
+  - LoRAs dienen dort als Kontext-Kompression, Stil-/Fachwissens-Spezialisierung oder Faehigkeitsoptimierung.
+  - Rechte, Governance, Review- und Approval-Regeln duerfen nicht ausschliesslich in Modellgewichten versteckt werden.
+- Architekturcheck:
+  - Laeuft die Komponente auch extern? Wenn ja, keine lokalen modellgebundenen Abhaengigkeiten.
+  - Muss Verhalten ueber alle Modelle identisch bleiben? Wenn ja, Prompt/Memory/Steuerdatei statt LoRA.
+  - Ist die Komponente nur lokaler spezialisierter Worker? Dann LoRA optional pruefen.
+
+## Fundamentale Architekturentscheidungen: Dual-Engine-Agentensystem
+
+- Quelle: Chat-History `chatgpt-fahrmodus-aktiviert`.
+- Status: Architekturentscheidung, nur Abschnitt 3 wurde uebernommen; sonstige Inhalte der Quelle wurden verworfen.
+- KB-Verweis: `llm-wiki/kb/agentic-system-architecture-dual-engine.md`.
+- Kernentscheidung:
+  - Das System trennt dauerhaft zwischen Interface-Engine und Produktions-Engine.
+  - Die Interface-Engine fuehrt Dialog, Intent-Klaerung, Routing, kurze Vorschlaege, UI-Hilfen und Nachfrage-Logik aus.
+  - Die Produktions-Engine verarbeitet echte Jobs mit Artefakten, State, Tests, Logs, Evidence und Review-Gates.
+  - Ein User-Satz darf nicht automatisch zum Produktionsjob werden; Intent, Scope und Risiko muessen geroutet werden.
+- Jobflow-Template-Regel:
+  - Jobflows sind wiederverwendbare Templates, aber konkrete Project Workflows werden pro Projekt erzeugt und versioniert.
+  - Templates bleiben unveraendert, solange kein bewusstes Template-Update beschlossen wird.
+  - Laufende Jobs arbeiten gegen einen stabilen Snapshot statt gegen bewegliche Prompt-/Template-Zustaende.
+- Shared-Core-Policy:
+  - Core-Regeln, Tool-Schemas, Rechte, Logging, Memory-/State-Konventionen und Review-Gates sind gemeinsam nutzbare Infrastruktur.
+  - Projekt- oder Jobflow-spezifische Regeln duerfen den Shared Core nicht stillschweigend ueberschreiben.
+  - Aenderungen am Shared Core brauchen explizite Versionierung und Rueckwirkungskontrolle auf bestehende Jobflows.
+- Review- und Evidence-Gates:
+  - Riskante Aktionen, Kosten, Veroeffentlichung, Rechteausweitung, Loeschen, Git-Pushes und externe Datenweitergabe brauchen Gate/Approval.
+  - Modell-Reasoning ist Diagnosematerial, aber kein Beweis; Belege kommen aus Dateien, Tests, Logs, Quellen, Tool-Ausgaben oder Bjoerns Freigabe.
+- Nicht uebernehmen aus der Quelle:
+  - sonstige Nebenpfade, Tool-/DB-Spekulationen oder Artikelideen aus derselben Chat-History.
+  - keine automatische Vermischung von Interface-Chat, PA-Aufgaben und Produktionsausfuehrung.
 
 ## Hermes-Agent Vergleichsquelle OpenClaw
 
@@ -483,8 +527,12 @@ Jeder neue Artikel oder Toolvorschlag muss zusaetzlich durch den Low-Budget-/CPU
   - WordPress-Core nicht direkt veraendern, wenn Theme, Plugin, Hook, Filter oder eigenes Modul reicht.
   - Eigene Plugins und Module werden lokal neu programmiert; bestehende Plugins/Module sind Referenz, kein Code-Copy.
   - Keine KI-Hintergrundsteuerung fuer Website-User-Interaktion oder aktive Seitenlogik einplanen.
+  - Website und KI-Netzwerk bleiben getrennte Architekturbereiche; WordPress ist Website-CMS, nicht KI-Netzwerk-Frontend oder Control Plane.
   - HTMX ist bevorzugt fuer kleine Interaktionen, Formulare, Fragmente und serverseitig kontrollierte UI.
+  - Server-driven UI: Der Server bleibt verantwortlich fuer fertige HTML-Seiten und HTML-Fragmente; HTMX fragt nach, das Frontend denkt nicht als SPA.
+  - Headless/minimal-headless ist erlaubt: WordPress liefert Content/API/Admin, eine eigene HTML/PHP/HTMX-Schicht rendert oeffentlich.
   - React bleibt moeglich, wenn echte Client-Komplexitaet entsteht.
+  - Konkrete Coding-Planung liegt im Website-Repo unter `/home/work/Local-git/Website/docs/frontend-architektur.md`.
   - Website-Repo soll nach Einrichtung eines eigenen GitHub-Remotes in den Local-git-Sync aufgenommen werden.
 
 
