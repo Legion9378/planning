@@ -463,6 +463,41 @@ Jeder neue Artikel oder Toolvorschlag muss zusaetzlich durch den Low-Budget-/CPU
   - zuerst stabile Single-Node-Basis aufbauen.
   - `DeepBlue` war historisch als Exo-aehnlicher "Deep Blue fuer Arme" aus drei bis vier Rechnern gedacht; diese virtuelle-Supercomputer-Annahme wird nicht weiter als Zielarchitektur gefuehrt.
 
+## GSD / Multi-Agenten-Paket
+
+- Quelle: Chat-History `chatgpt-gsd-bedeutung-erklaren-2026-05-07T02-38-52-595Z.md`
+- Status: nicht als Zielsoftware uebernehmen.
+- Einordnung:
+  - GSD wurde als Multi-Agenten-Ansatz mit parallelen spezialisierten Agenten besprochen.
+  - Fuer Bjoerns Low-Budget-/CPU-first-Netzwerk ist ein dauerhaft parallel arbeitendes Multi-Agenten-Paket nicht die Baseline.
+  - Bestehende Hermes-/Jobflow-Regeln haben Vorrang: ein aktiver Jobkontext, State, Review, kontrollierte Ressourcen.
+- Nicht uebernehmen:
+  - GPU-/beschleunigerlastige Parallel-Agenten-Annahmen.
+  - LangChain-/zweites-Orchestrator-Denken neben OpenClaw/Hermes-Agent.
+  - digitale-Zwilling-/Familienassistenz-Idee als kurzfristige Zielarchitektur.
+- Merken:
+  - Persistenz ist kritisch: Messaging-/Memory-/State-Daten duerfen bei Neustart nicht verschwinden oder nur im Sessionkontext leben.
+  - OpenClaw-/OpenCore-artige Systeme muessen auf Neustartverhalten, Nachrichtenpersistenz und State-Recovery geprueft werden.
+
+## GPU-Offloading / LocalAI-Sharding historische Korrektur
+
+- Quelle: Chat-History `chatgpt-gpu-offloading-optimierung-2026-05-07T03-12-02-249Z.md`
+- Status: historische Planungsphase, nicht aktueller Zielstand.
+- Uebernehmen:
+  - Sharding/virtueller Supercomputer ist nicht die Baseline.
+  - Mehrere Dienste/Worker brauchen klare Registry, Routing, Status und Lastinformation.
+  - Hardware bekommt Rollen erst bei echtem Bedarf, nicht nur wegen Verfuegbarkeit.
+  - Pi5 bleibt Potenzial-Knoten, bis konkrete Systemreibung sichtbar wird.
+- Nicht uebernehmen:
+  - GPU-Offloading als Standardpfad.
+  - LocalAI-Swarm oder Modell-Sharding ueber Kleingeraete.
+  - N5105/Jasper als Chat-Modellserver.
+  - alte NUC/Ryzen-32-GB-Worker-Annahmen.
+  - Pi400 als fest gesetztes Gateway, wenn spaetere Node-Rollen anderes festhalten.
+- Aktueller Vorrang:
+  - `docs/ki-netzwerk-node-rollen.md`
+  - `docs/hardware-und-os-stand.md`
+
 ## Universelles Jobframework Laptop und Netzwerk
 
 - Quelle: Chat-History `chatgpt-ki-planung-ideenexperiment`

@@ -1,6 +1,6 @@
 # Hardware und OS-Stand
 
-Stand: 2026-06-07
+Stand: 2026-06-09
 
 Diese Datei sammelt den aktuellen Hardware- und Betriebssystemstand. Aeltere Chat-History-Dateien koennen Schreibfehler, alte RAM-Werte, alte Rollen oder veraltete OS-Annahmen enthalten.
 
@@ -82,6 +82,9 @@ Diese Datei sammelt den aktuellen Hardware- und Betriebssystemstand. Aeltere Cha
   - lokaler Webserver laeuft unter YunoHost.
 
 ## Veraltete Annahmen
+
+
+- Chat-History `chatgpt-gpu-offloading-optimierung` enthaelt aeltere Rollen-/RAM-Annahmen wie zwei 32-GB-Worker, N5105 als Chatserver, Pi400 als festes Kommunikationsgateway und LocalAI-/GPU-Offloading-Planung. Diese Angaben sind historisch und werden nicht gegen den aktuellen Hardwarestand uebernommen.
 
 - `HP EliteBook 820` war ein laengerer Schreibfehler; gemeint ist das HP EliteBook 830 G6.
 - Mac Mini als NAS ist ueberholt.

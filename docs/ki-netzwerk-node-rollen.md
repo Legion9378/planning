@@ -1,6 +1,6 @@
 # KI-Netzwerk Node-Rollen
 
-Stand: 2026-06-07
+Stand: 2026-06-09
 
 Diese Datei ist der aktuelle Planungsstand fuer die Rollen der vorhandenen Netzwerkgeraete. Aeltere Chat-History-Dateien koennen fruehere Annahmen enthalten und duerfen nicht ohne diese Korrekturen als Zielarchitektur gelesen werden.
 
@@ -92,6 +92,21 @@ Hardware- und OS-Details stehen in `docs/hardware-und-os-stand.md`.
 - Calibre muss wieder als GUI-Tool installiert werden.
 - Rolle: temporaere KI-Werkbank fuer aktive Sitzungen, Tests und Codex-Arbeit.
 - Keine dauerhafte Zentrale, kein staendig laufender KI-Netzwerk-Worker und kein Pflicht-Queue-Host.
+
+
+## Historische Korrektur: GPU-Offloading / LocalAI-Sharding
+
+Quelle: Chat-History `chatgpt-gpu-offloading-optimierung-2026-05-07T03-12-02-249Z.md`.
+
+Diese Quelle beschreibt eine aeltere Phase mit NUC/Ryzen-Worker-Annahmen, N5105-Chatserver-Idee, Pi400-Kommunikationsgateway und Pi5-Potenzialrolle. Der aktuelle Node-Rollenstand in dieser Datei hat Vorrang.
+
+Uebernommen wird nur die Architekturregel:
+
+- kein LocalAI-/Modell-Sharding als Baseline;
+- keine virtuelle Supercomputer-/DeepBlue-Annahme;
+- keine Rolle nur vergeben, weil Hardware vorhanden ist;
+- kleine Geraete erst nach konkreter Reibung als leichte Dienste, Tools, Trigger, Queue-Hilfen oder Spezialdienste pruefen;
+- keine Doppelrollen fuer Orchestrator, Postmaster/Gateway oder Chatserver einplanen.
 
 ## Verworfen / offen
 
