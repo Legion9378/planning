@@ -132,14 +132,19 @@ Jeder neue Artikel oder Toolvorschlag muss zusaetzlich durch den Low-Budget-/CPU
   - RWKV/RNN nur als Low-RAM-/Long-Context-/Spezialhardware-Pruefkontext fuehren, nicht als gesetztes Modell.
   - Rockchip-NPU und Coral Dual TPU sind Pruefkontexte, keine bestaetigte Beschleunigungsstrategie.
 
-## Closed-Loop-Jobflow und Snapshot-Pattern
+## Closed-Loop-Jobflow, Memory-Layer und Snapshot-Pattern
 
 - Quelle: Chat-History `chatgpt-architekturvergleich-und-entwurf`.
+- Zusatzquelle: Chat-History `chatgpt-fahrmodus-aktiviert`, Punkt 2 / Frage 1 `The Memory Layer That Breaks the Stateless AI Loop`.
 - Status: Architekturpattern, kein OpenClaw-/Vercel-/Supabase-Stack.
 - Uebernehmen:
   - Proposal, Policy/Approval, Mission, Steps, Worker, Event, Trigger/Reaction und Heartbeat als Denkmodell fuer Jobflows.
   - Active Tables als volatile Runtime-Flaeche.
   - Snapshots in Persistent Memory, nicht dauerhaft in Active Tables.
+  - Fast-Brain-/Slow-Brain-Prinzip fuer Memory: validierte Memory als schnelle Kontext-/Regelschicht, Modelle als Slow Brain fuer neue Situationen.
+  - Confidence Scoring mit Sample-, Consistency- und Recency-Signalen.
+  - Batch-Konsolidierung statt direkter Memory-Promotion.
+  - Konfliktaufloesung und Review-Grenzen vor automatischer Memory-Nutzung.
   - Double-Buffer-/Ping-Pong-Prinzip: inaktives Set schreiben, validieren, umschalten, altes Set erst danach loeschen.
   - Knowledge Graph oder spaetere Graph-/Vector-Schichten erst nach erfolgreichem Commit aktualisieren.
 - Nicht uebernehmen:
@@ -498,6 +503,21 @@ Jeder neue Artikel oder Toolvorschlag muss zusaetzlich durch den Low-Budget-/CPU
   - `docs/ki-netzwerk-node-rollen.md`
   - `docs/hardware-und-os-stand.md`
 
+## Infrastruktur-Aufbau als Top-down-Runbook
+
+- Quelle: Chat-History `chatgpt-jasper-lake-n5105-details-2026-05-07T01-45-34-678Z.md`.
+- Status: Ablaufmuster uebernehmen; konkrete alte Geraete-, LocalAGI-, SD-/TTS- und Worker-Liste nicht uebernehmen.
+- Regel:
+  - Groessere Infrastrukturaufbauten werden von oben nach unten abgearbeitet, statt parallel an mehreren offenen Baustellen zu starten.
+  - Wiederholbare Arbeit wird als Loop behandelt: vorbereiten, installieren/flashen/kompilieren, konfigurieren, testen, dokumentieren, dann naechster Knoten oder Dienst.
+  - Nach jedem groesseren Block erfolgt ein kurzer Funktionstest, bevor der naechste Block beginnt.
+  - Installations-/Flash-/Service-Loops bekommen klare Stopppunkte: Fehler stoppen den Ablauf und werden erst analysiert, bevor weitere Systeme angepasst werden.
+- Beispiel-Loops:
+  - OS-/Flash-Loop: Zielsystem pruefen -> Image/Installer vorbereiten -> installieren/flashen -> Basissetup -> Reboot-/SSH-/Netzwerktest.
+  - Service-Loop: Dienst installieren -> Konfiguration setzen -> Start pruefen -> Testcall/Healthcheck -> Logging dokumentieren.
+  - Modell-/Asset-Loop: Download -> Integritaet/Pfad pruefen -> Minimaltest -> Speicher-/Sync-/Backup-Regel klaeren.
+  - Agent-/Config-Loop: Rolle anlegen -> Testjob -> Review -> Anpassung -> erst dann produktiver Einsatz.
+
 ## Universelles Jobframework Laptop und Netzwerk
 
 - Quelle: Chat-History `chatgpt-ki-planung-ideenexperiment`
@@ -579,6 +599,7 @@ Jeder neue Artikel oder Toolvorschlag muss zusaetzlich durch den Low-Budget-/CPU
 - Status: **Analyse-Kandidat** — **5 OFFENE BLOCKER** (siehe unten), KB-Seite existiert (`kb/password-rotor-pepper-pattern.md`), PHP+JS-Grundgerüst vorhanden
 - KB: `kb/password-rotor-pepper-pattern.md`, `content/notes/enigma-rotorcipher-passwort-sicherheit-besprechung.md`
 - Einordnung: Eigenes Passwort-Design — Rotorcipher (100 Rotoren + 4 Reflektoren) als fixer Pepper vor Argon2id, Webhosting-kompatibel (PHP 7.4+/8.x, Pure PHP), separate User/Admin-Encryption (25/50 Rotoren)
+- Scope-Korrektur aus Chat-History `chatgpt-ki-geld-verdienen-moglichkeiten-2026-05-07T01-55-58-408Z.md`: vorerst **nicht** fuer WordPress-Auth, User-Meta, Profilfelder, Fremdplugin-Daten oder generelles WordPress-Hardening einsetzen; erster realer Testbereich ist ein eigener Anti-Cheat-/Game-State-Layer fuer persistente Website-Games mit eigenen Tabellen und eigener Game-API.
 
 ### 🚫 BLOCKER (müssen gelöst sein vor Integration/Entscheidung)
 

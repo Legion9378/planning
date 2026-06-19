@@ -26,6 +26,14 @@ Write Scene 1: [kurze Beschreibung der Szene oder Fortsetzung der Geschichte]
 - 2. NSFW → SFW Umschreib-Prompt
 - 3. Übersetzungs-Prompt ins Deutsche
 - 4. E-Book Vorlage
+- 5. Rollen-/Profil-Prompts ausarbeiten:
+  - SFW-Storyprofil
+  - privates NSFW-Rohfassungsprofil
+  - Lore-/Worldbuilding-Profil
+  - Kapitelgenerator-Profil
+  - Rewrite-/Public-Fassung-Profil
+  - Web-/Blog-/Begleittext-Profil
+- Quelle fuer Punkt 5: Chat-History `chatgpt-interne-gedankengange-bei-deepseek-2026-05-07T01-25-39-774Z`; konkrete LocalAI-/Runner-Konfiguration erst nach aktueller Installationspruefung festlegen.
 
 ## Character-Style-Grundmodul: 80er-Cel-Look mit realer Anatomie
 

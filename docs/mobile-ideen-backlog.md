@@ -1,6 +1,6 @@
 # Mobile Ideen Backlog
 
-Stand: 2026-06-07
+Stand: 2026-06-18
 
 Diese Datei sammelt Ideen, die unterwegs schnell notiert wurden. Der Zweck ist Wiedervorlage: Eine Idee gilt erst als abgearbeitet, wenn sie entweder in ein Fachkonzept uebernommen, verworfen oder bewusst geparkt wurde.
 
@@ -45,3 +45,13 @@ Diese Datei sammelt Ideen, die unterwegs schnell notiert wurden. Der Zweck ist W
 - Status: in Architektur aufgenommen.
 - Kurzbeschreibung: Paperclip reicht nicht, weil jeder Jobflow ein eigener Firmenarm unter einem zentralen CEO sein soll.
 - Aktueller Ort: `llm-wiki/kb/hermes-agent-ceo-und-jobflows.md` und `planning/docs/ki-netzwerk-interface-kandidaten.md`.
+
+## Spaeter / ganz hinten
+
+### Morning-Call-iOS-App-Integration
+
+- Zielbereich: iOS-App / Mobile Workflow / Tagesstart-Automatisierung.
+- Quelle: Chat-History `chatgpt-integration-von-morning-call-2026-05-07T02-22-40-592Z`.
+- Status: geparkt, ganz ans Ende der Planungen.
+- Kurzbeschreibung: Die Datei beginnt als Idee zur Integration einer iOS-App namens Morning Call; spaeterer Pruefpunkt ist, ob daraus ein mobiler Tagesstart-/Reminder-/Briefing-Workflow fuer Björns lokales KI-System oder Hermes-Web/PWA werden soll.
+- Naechster Schritt: erst spaeter klaeren, welche iOS-App konkret gemeint ist, welche Daten/Trigger sie liefern kann, ob Shortcuts/Webhooks/API nutzbar sind und ob die Integration besser ueber iOS Kurzbefehle, Kalender/Reminder, Webhook oder Hermes-Web/PWA laufen soll.

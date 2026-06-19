@@ -17,7 +17,41 @@
   - Lesefassung ohne Marker fuer das Kapitel.
 - Es gibt keinen separaten Polishing-Step ausserhalb der Workflow-Kontrollschritte.
 
-## 2. TTS Pipeline
+## 2. Modellprofile und Story-Rollen
+
+- Quelle: Chat-History `chatgpt-interne-gedankengange-bei-deepseek-2026-05-07T01-25-39-774Z`.
+- Status: Planungsregel; konkrete LocalAI-/Modellrunner-Pfade muessen spaeter gegen die aktuelle Installation geprueft werden.
+- Grundregel: Storyarbeit wird nicht ueber ein einzelnes Universalprofil geplant, sondern ueber getrennte Rollen/Profile.
+- Vorgesehene Profile:
+  - SFW-Storyprofil fuer oeffentliche/YouTube-taugliche Fassungen;
+  - privates NSFW-Storyprofil fuer interne Rohfassungen;
+  - Lore-/Worldbuilding-Profil fuer Kanon, Crossover-Regeln, Kontinuitaet und Power-Scaling;
+  - Kapitelgenerator-Profil fuer lange, konsistente Kapitel mit definierter Ausfuehrlichkeit;
+  - Rewrite-/Public-Fassung-Profil fuer Entschaerfung auf PG-13, PG-16 oder eine spaeter festgelegte Zielstufe;
+  - Web-/Blog-/Begleittext-Profil fuer Website, Medium, Substack und Projekttexte.
+- Inspirationsangaben werden als Stil- und Strukturhinweise genutzt, nicht als Kopierauftrag.
+- Sichtbare Reasoning-/Gedankengang-Ausgaben duerfen nur als Diagnosematerial behandelt werden; Entscheidungen brauchen Quellen, Tests, Review oder menschliche Freigabe.
+- Beispiel fuer spaeteres Story-Profiling:
+  - Stil-/Strukturinspiration aus `Balancing Realities`, `Beginning a New Path`, `A Third Path To The Future` und Autorenmix stargatesg1fan1, vimesenthusiast, robst, Rorschach's Blot;
+  - Realitaetswechsel-Mechanik angelehnt an `Sliders`, aber ohne Zeitlimit;
+  - danach folgen Crossover-Liste, Grundmechanik, Power-Scaling, Ton und Beschraenkungen.
+
+## 3. Action- und Humor-Regel
+
+- Quelle: Chat-History `chatgpt-jobflow-fur-ki-projekte-2026-05-07T01-52-30-533Z.md`.
+- Status: verbindliche Story-DNA fuer Action-Szenen.
+- Grundregel: Action bleibt erdnah, physisch plausibel, lesbar und konsequenzbewusst.
+- Gewalt ist situativ und funktional; Wirkung zaehlt mehr als Spektakel.
+- Humor ist erlaubt, wenn er punktuell, kurz und aus Charakterdynamik, Timing oder physischem Kontrast entsteht.
+- Vergleich: Avengers-Timing ja, Deadpool-Dauerfeuer nein.
+- Nicht erlaubt:
+  - Meta-Humor oder Durchbrechen der vierten Wand;
+  - Slapstick-Framing als Grundton;
+  - cartoonhafte Gewalt-Eskalation;
+  - Gags, die Spannung, Stakes oder Konsequenzen zerstoeren.
+- Reviewer prueft: Kippt die Szene in Albernheit? Zerstoert der Gag Spannung oder Konsequenzen?
+
+## 4. TTS Pipeline
 - Referenzaudio pro Charakter (einmal aufnehmen oder generieren)
 - Optionen:
   - Lokale Lösungen (Piper TTS, StyleTTS 2, Tortoise-TTS)
@@ -31,7 +65,7 @@
 - Der Mac Mini ist nicht als TTS-Host eingeplant; er bleibt fuer OpenCode und Agent Brain im KI-Netzwerk reserviert.
 - TTS-Auswahl muss budgetschonend erfolgen: zuerst kostenlose, lokale oder sehr guenstige Loesungen pruefen; keine kostenpflichtigen Cloud-/Abo-Dienste als Default.
 
-## 3. Video Production
+## 5. Video Production
 - Avatar-Bild (sitzend im Sessel)
 - Statische Hintergrundbilder pro Szene
 - Tools-Empfehlung:
@@ -39,7 +73,7 @@
   - **Shotcut** oder **DaVinci Resolve** (kostenlos auf Linux)
   - iMovie + GarageBand auf iPad als Alternative
 
-## 4. Musik und Hintergrundaudio
+## 6. Musik und Hintergrundaudio
 
 - Ace Step 1.5 ist als Open-Source-Alternative zu Suno AI ein wieder aufzunehmender Testkandidat.
 - Frueherer Test scheiterte an einem Gradio-Fehler; dieser Fehler wurde kurz vor dem Ausfall der internen SSD gefunden, aber nicht mehr praktisch nachgetestet.
@@ -47,12 +81,12 @@
 - Offen: weitere Tools fuer Audiodateien, nutzbare Hintergrundmusik und loopbare Tracks recherchieren.
 - GarageBand bleibt fuer spaeteres manuelles Mixing relevant.
 
-## 5. Technik
+## 7. Technik
 - Laptop: Xubuntu 24.04 LTS
 - Spätere Verlagerung ins KI-Netzwerk
 - Verarbeitung ist als CPU-basierter Workflow zu planen; keine nutzbare iGPU, dGPU oder eGPU voraussetzen.
 
-## 6. Collector-Jobflow
+## 8. Collector-Jobflow
 
 - Ein OpenFang-inspirierter Collector bleibt als spaeterer eigener Jobflow vorgesehen.
 - Zweck: semi-automatische Informationssammlung fuer Story-Grundlagen, Crossover-Lore, Quellenlisten und andere Projektkontexte.
@@ -61,7 +95,7 @@
 
 Weitere Details werden ergänzt.
 
-## 7. Character-Style-Regel fuer Bildgenerierung
+## 9. Character-Style-Regel fuer Bildgenerierung
 
 - Quelle: Chat-History `chatgpt-fast-dllm-und-vision-modelle`.
 - Status: als Regel uebernommen.
@@ -80,7 +114,7 @@ Weitere Details werden ergänzt.
 - CPU-first-Hinweis:
   - Realistischere, weniger extreme Proportionen gelten als bildgenerierungsfreundlicher, weil sie weniger extreme Schatten, Kanten und Koerpervolumen erzwingen.
 
-## 8. Content-Werkbank fuer Story, YouTube, Audiobook, Medium und Substack
+## 10. Content-Werkbank fuer Story, YouTube, Audiobook, Medium und Substack
 
 - Quelle: Chat-History `chatgpt-github-und-agenthub-integration`.
 - Status: als allgemeine Jobflow-Regel uebernommen.
