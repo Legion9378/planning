@@ -64,6 +64,8 @@
 - Piper, Coqui und weitere TTS-Loesungen bleiben Testkandidaten. Coqui wird nicht automatisch ausgeschlossen, aber als Wartungsrisiko markiert, weil es seit einiger Zeit nicht mehr aktiv weiterentwickelt wird.
 - Der Mac Mini ist nicht als TTS-Host eingeplant; er bleibt fuer OpenCode und Agent Brain im KI-Netzwerk reserviert.
 - TTS-Auswahl muss budgetschonend erfolgen: zuerst kostenlose, lokale oder sehr guenstige Loesungen pruefen; keine kostenpflichtigen Cloud-/Abo-Dienste als Default.
+- Sprachfokus fuer Story-/Content-Betrieb: Deutsch und Englisch. Aeltere mehrsprachige Pi5-/Translator-Modellmappings werden nicht weitergefuehrt.
+- TTS-Regie ist sprachspezifisch: Deutsche und englische Fassungen brauchen eigene Aussprache-, Betonungs-, Pausen- und Sprecherhinweise statt blinder Uebernahme aus der jeweils anderen Sprache.
 
 ## 5. Video Production
 - Avatar-Bild (sitzend im Sessel)
