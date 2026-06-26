@@ -66,6 +66,7 @@
 - TTS-Auswahl muss budgetschonend erfolgen: zuerst kostenlose, lokale oder sehr guenstige Loesungen pruefen; keine kostenpflichtigen Cloud-/Abo-Dienste als Default.
 - Sprachfokus fuer Story-/Content-Betrieb: Deutsch und Englisch. Aeltere mehrsprachige Pi5-/Translator-Modellmappings werden nicht weitergefuehrt.
 - TTS-Regie ist sprachspezifisch: Deutsche und englische Fassungen brauchen eigene Aussprache-, Betonungs-, Pausen- und Sprecherhinweise statt blinder Uebernahme aus der jeweils anderen Sprache.
+- TTS-/Voice-Reader-Woerterbuecher muessen gegen die konkrete Ziel-App-Syntax formatiert werden. Keine Standardannahmen uebernehmen: erst Doku oder funktionierendes Beispiel pruefen, dann mit 2-3 Eintraegen testimportieren, danach groessere Listen erzeugen. Fuer Voice Dream Reader ist jeder Eintrag als eigene Zeile noetig; zusammengeklebte Eintraege oder nicht akzeptierte Kommentarzeilen verhindern den Import.
 
 ## 5. Video Production
 - Avatar-Bild (sitzend im Sessel)
