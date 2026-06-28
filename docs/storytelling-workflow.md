@@ -117,7 +117,16 @@ Weitere Details werden ergänzt.
 - CPU-first-Hinweis:
   - Realistischere, weniger extreme Proportionen gelten als bildgenerierungsfreundlicher, weil sie weniger extreme Schatten, Kanten und Koerpervolumen erzwingen.
 
-## 10. Content-Werkbank fuer Story, YouTube, Audiobook, Medium und Substack
+## 10. Image-Prompt-Feldstruktur
+
+- Bildprompt-Generatoren muessen das Zielinterface beachten: Positive Prompt, Negative Prompt und ggf. Style-/LoRA-/Embedding-/Workflow-Felder.
+- Positive Prompt wird modular aus `STYLE_CORE + FOCUS_PROFILE + SCENE_CONTENT` aufgebaut.
+- Negative Prompt enthaelt nur unerwuenschte Merkmale und wird nicht mit positiven Stil-/Szenenteilen vermischt.
+- Fuer EasyDiffusion gilt: Positive Prompt und Negative Prompt jeweils einzeilig halten; jede neue Zeile wird als neues Bild interpretiert.
+- EasyDiffusion unterstuetzt CPU, bietet aber keine API/Webhooks fuer Josie. ComfyUI-CPU ist als naechster API-faehiger Bildworkflow-Pfad vorgesehen.
+- Detailregel: `planning/docs/image-generation-prompt-field-structure.md`.
+
+## 11. Content-Werkbank fuer Story, YouTube, Audiobook, Medium und Substack
 
 - Quelle: Chat-History `chatgpt-github-und-agenthub-integration`.
 - Status: als allgemeine Jobflow-Regel uebernommen.
