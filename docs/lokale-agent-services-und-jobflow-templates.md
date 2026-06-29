@@ -67,6 +67,20 @@ Das vereinfacht neue Projekte innerhalb desselben Jobflow-Typs, ohne jedes Mal d
 - Abbruch-/Review-Regeln,
 - Self-Confidence-/Validator-Regeln falls relevant.
 
+## Planer-Agent Project-Existence-Gate
+
+Vor dem Start groesserer Jobs prueft der Planer-Agent, ob ein Projekt bereits existiert und welcher Stand in Planning/KB/Git/Recall-artigen Metadaten vorliegt.
+
+Pflichtfragen:
+
+- existiert das Projekt schon?
+- wo liegt das Repo oder der Artefaktpfad?
+- was ist der letzte Planungs-/Arbeitsstand?
+- welche offenen Review-/Blocker-Punkte gibt es?
+- welcher naechste Schritt ist wirklich neu?
+
+Detailregel: `planning/docs/planer-agent-project-existence-gate.md`.
+
 ## Nicht uebernehmen
 
 Die alte Daphne-Datei ist keine aktuelle Implementierung:

@@ -70,6 +70,24 @@ ComfyUI-CPU soll demnaechst installiert werden, weil ComfyUI eine lokale API fue
 
 Fuer Josie/Automation ist ComfyUI deshalb der bevorzugte Bildworkflow-Pfad, auch wenn CPU-only langsam ist.
 
+## Konsistenz statt Pipeline-Zwang
+
+Bjoern braucht nicht zwingend eine automatische Bildpipeline. Ziel ist reproduzierbar gute Bildqualitaet, auch wenn der Prozess komplett manuell bleibt.
+
+Stabil halten:
+
+- Modell,
+- Sampler,
+- Steps,
+- CFG Scale,
+- Seed,
+- Positive Prompt,
+- Negative Prompt.
+
+Wenn ein Bild gut ist, Seed und Parameter speichern. Varianten nur kontrolliert und minimal aendern.
+
+Eine ComfyUI-CPU-Pipeline im KI-Netzwerk kann spaeter dazukommen, ist aber nicht Voraussetzung fuer das Ziel.
+
 ## Nicht uebernehmen
 
 Aus der alten Quelle nicht als aktuellen Standard uebernehmen:
