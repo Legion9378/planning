@@ -96,6 +96,14 @@ Diese Datei sammelt den aktuellen Hardware- und Betriebssystemstand. Aeltere Cha
   - RK3588-Rechner bleibt auf Ubuntu 22.04 wegen Rockchip-NPU-Tools.
   - lokaler Webserver laeuft unter YunoHost.
 
+## Funkumgebung / Altbau-Notiz
+
+- In Bjoerns Gebaeude koennen Metallputzmatten wie teilweise Faraday-Strukturen wirken.
+- Besonders 2,4-GHz-Funk kann dadurch gestoert werden: Bluetooth, WLAN 2,4 GHz, Funkmaeuse/-tastaturen, Zigbee/Smart-Home und aehnliche Geraete.
+- Mikrowellen und andere stoerende Funk-/Elektroquellen koennen 2,4 GHz zusaetzlich belasten.
+- Wenn moeglich 5-GHz-/Mesh-WLAN bevorzugen; 2,4 GHz nur dort nutzen, wo Reichweite wichtiger ist als Stabilitaet/Durchsatz.
+- Bei Headset-, Tablet-, Voice- oder Smart-Home-Problemen Funkumgebung und Bandwahl mitpruefen.
+
 ## Veraltete Annahmen
 
 - Chat-History `chatgpt-gpu-offloading-optimierung` enthaelt aeltere Rollen-/RAM-Annahmen wie zwei 32-GB-Worker, N5105 als Chatserver, Pi400 als festes Kommunikationsgateway und LocalAI-/GPU-Offloading-Planung. Diese Angaben sind historisch und werden nicht gegen den aktuellen Hardwarestand uebernommen.
