@@ -587,7 +587,11 @@ Jeder neue Artikel oder Toolvorschlag muss zusaetzlich durch den Low-Budget-/CPU
   - Server-driven UI: Der Server bleibt verantwortlich fuer fertige HTML-Seiten und HTML-Fragmente; HTMX fragt nach, das Frontend denkt nicht als SPA.
   - Headless/minimal-headless ist erlaubt: WordPress liefert Content/API/Admin, eine eigene HTML/PHP/HTMX-Schicht rendert oeffentlich.
   - React bleibt moeglich, wenn echte Client-Komplexitaet entsteht.
+  - Browser-Game-Module fuer WordPress starten ebenfalls mit HTML/HTMX/JavaScript statt Canvas/Game-Engine; Canvas bleibt spaeter moeglich, wenn Gameplay/State stabil sind.
+  - Portal-/Game-Referenzen wie freebitco.in werden nur als Grundgeruest-/Aufbauprinzip genutzt: konstantes Layout, Top-Menue als Kontextgeber, dynamische Submenues/Sidebars und eigene Module. Kein fremdes Design, kein fremder Code, keine Reverse-Engineering-Uebernahme.
   - Konkrete Coding-Planung liegt im Website-Repo unter `/home/work/Local-git/Website/docs/frontend-architektur.md`.
+  - Browser-Game-Planung: `/home/work/Local-git/planning/docs/browser-game-wordpress-modul.md`.
+  - Context-/Mode-Plugin-Planung: `/home/work/Local-git/planning/docs/wordpress-context-mode-plugin.md`.
   - Website-Repo soll nach Einrichtung eines eigenen GitHub-Remotes in den Local-git-Sync aufgenommen werden.
 
 

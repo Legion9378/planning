@@ -96,6 +96,15 @@ Diese Datei sammelt den aktuellen Hardware- und Betriebssystemstand. Aeltere Cha
   - RK3588-Rechner bleibt auf Ubuntu 22.04 wegen Rockchip-NPU-Tools.
   - lokaler Webserver laeuft unter YunoHost.
 
+## Netzwerk-Grundtopologie
+
+- FRITZ!Box 1: Mesh-Master / Internet-Gateway.
+- FRITZ!Box 2: Mesh-Repeater / LAN-Bridge.
+- Switch hinter FRITZ!Box 2 fuer feste KI-/Server-Geraete.
+- Feste Server-/KI-Geraete bevorzugt per LAN am Switch.
+- Mobile Geraete laufen primaer ueber WLAN/Mesh.
+- Diese Notiz beschreibt nur die Grundtopologie; alte NanoCluster-/Storage-/Pi400-/Sipeed-Rollen aus der Quelle sind verworfen.
+
 ## Funkumgebung / Altbau-Notiz
 
 - In Bjoerns Gebaeude koennen Metallputzmatten wie teilweise Faraday-Strukturen wirken.
