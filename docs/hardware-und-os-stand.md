@@ -105,6 +105,15 @@ Diese Datei sammelt den aktuellen Hardware- und Betriebssystemstand. Aeltere Cha
 - Mobile Geraete laufen primaer ueber WLAN/Mesh.
 - Diese Notiz beschreibt nur die Grundtopologie; alte NanoCluster-/Storage-/Pi400-/Sipeed-Rollen aus der Quelle sind verworfen.
 
+
+## Zeitbasis / NTP
+
+- Interne Standard-Zeitquelle im Heimnetz: FRITZ!Box über `fritz.box`.
+- KI-/Server-Nodes sollen fuer interne Konsistenz dieselbe Zeitquelle verwenden, statt jeweils direkt unterschiedliche externe NTP-Pools zu nutzen.
+- Fuer Logs, Agent-/Event-Reihenfolgen, Container-Healthchecks und Debugging ist eine konsistente interne Zeitbasis wichtiger als eine minimale konstante Abweichung zur externen UTC.
+- Externe Zeitkritik separat pruefen: TLS-Zertifikate, signierte Tokens, externe APIs mit strikten Zeitfenstern und Transaktions-/Finanzsysteme.
+- Quelle: Chat-History `chatgpt-unterschiede-ubuntu-22-04-24-04-2026-05-07T01-48-59-481Z.md`; nur NTP-Teil uebernommen, restliche First-Boot-/AGI-/Docker-Checkliste verworfen.
+
 ## Funkumgebung / Altbau-Notiz
 
 - In Bjoerns Gebaeude koennen Metallputzmatten wie teilweise Faraday-Strukturen wirken.

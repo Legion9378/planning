@@ -162,3 +162,13 @@ Weitere Details werden ergänzt.
 - Neue Idee von Bjoern: Fanfiction-Uebersetzungen in Ruhrpottplatt.
 - Stilprinzip: grob vergleichbar mit Hennes Benders Asterix-Uebertragungen, nicht als exakte Kopie, sondern als Hinweis auf Tonalitaet, Dialektuebertragung und humorvolle Lokalisierung.
 - Als spaeterer Content-/Story-Workflow-Kandidat fuehren; keine sofortige Umsetzung.
+
+
+## 13. Rollenbasiertes Multimodell-Routing
+
+- Quelle: Chat-History `chatgpt-turboquant-auf-cpu-nutzung-2026-05-07T07-47-25-193Z.md`.
+- Detailplanung: `planning/docs/hermes-multimodell-routing.md`.
+- Grundregel: Story- und Agentenarbeit wird nicht auf ein einzelnes Hybridmodell optimiert, sondern ueber Rollen/Profile geroutet.
+- Rollen: creative/draft, structure/reasoning, agent/tools, validator/reviewer.
+- Konkrete Deckard-/Heretic-/Gemma-/Hermes-Modellnamen aus alten Chats sind nur historische Kandidaten und muessen vor Einsatz frisch gegen Hardware, Runtime, Lizenz, Kontextfenster und Qualitaet geprueft werden.
+- Private Rohentwuerfe duerfen andere Modelle nutzen als oeffentliche Fassungen; YouTube-/Publishing-Fassungen brauchen Rewrite und Review auf Zielstufe.
