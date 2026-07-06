@@ -50,8 +50,8 @@ Diese Datei sammelt Ideen, die unterwegs schnell notiert wurden. Der Zweck ist W
 
 ### Morning-Call-iOS-App-Integration
 
-- Zielbereich: iOS-App / Mobile Workflow / Tagesstart-Automatisierung.
-- Quelle: Chat-History `chatgpt-integration-von-morning-call-2026-05-07T02-22-40-592Z`.
-- Status: geparkt, ganz ans Ende der Planungen.
-- Kurzbeschreibung: Die Datei beginnt als Idee zur Integration einer iOS-App namens Morning Call; spaeterer Pruefpunkt ist, ob daraus ein mobiler Tagesstart-/Reminder-/Briefing-Workflow fuer Björns lokales KI-System oder Hermes-Web/PWA werden soll.
-- Naechster Schritt: erst spaeter klaeren, welche iOS-App konkret gemeint ist, welche Daten/Trigger sie liefern kann, ob Shortcuts/Webhooks/API nutzbar sind und ob die Integration besser ueber iOS Kurzbefehle, Kalender/Reminder, Webhook oder Hermes-Web/PWA laufen soll.
+- Zielbereich: iOS-App / Mobile Workflow / Tool-/Skill-Idee fuer Bjoerns private KI.
+- Quelle: Chat-History `chatgpt-integration-von-morning-call-2026-05-07T02-22-40-592Z.md`.
+- Status: geparkt, ganz ans Ende der Planungen; Grundidee relevant, Durchfuehrung noch nicht ausreichend ausgearbeitet.
+- Kurzbeschreibung: Die Datei beginnt mit der Idee, die Funktion der iOS-App Morning Call als Tool/Skill fuer Bjoerns private KI nutzbar zu machen. Der sichtbare spaetere Exportteil driftet zu MP3Pro/Audio-Historie; fuer die Planung zaehlt die MorningCall-Grundidee, nicht der spaetere Smalltalk.
+- Naechster Schritt: erst spaeter konkret klaeren, welche MorningCall-Funktion nachgebaut oder angebunden werden soll: Tagesstart-Briefing, Wecker/Reminder, Routine-Trigger, Kalender-/Aufgaben-Kontext, Audioausgabe, Push/Notification oder Sprachdialog. Danach pruefen, ob die Umsetzung besser ueber iOS Kurzbefehle, Kalender/Reminder, Webhook, Hermes-Web/PWA, native iOS-App oder Hermes-Tool/Skill erfolgt.

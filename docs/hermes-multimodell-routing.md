@@ -33,6 +33,21 @@ Bjoerns lokale Agenten- und Story-Workflows sollen nicht auf ein einziges "perfe
    - Ein leistungsstaerkeres Modell kann fuer eine Rolle schlechter sein als ein kleineres, stabileres Modell.
    - Modellwahl wird pro Aufgabe und Zielsystem getestet.
 
+
+## System-Level-MoE fuer Coding-Domaenen
+
+- Quelle: Chat-History `chatgpt-voraussetzungen-fur-ki-entwicklung-2026-05-07T02-11-33-240Z.md`.
+- Status: Planungsregel; spaeterer Abgleich auf real vorhandener Hardware ist Pflicht.
+- Kein Ziel: eigenes echtes MoE-/Foundation-Modell trainieren. Das ist mit Bjoerns Hardware nicht realistisch und gehoert in GPU-Cluster-/Forschungsinfrastruktur.
+- Zielprinzip: MoE-aehnliches Verhalten auf Systemebene:
+  - Orchestrator waehlt Modell, Tool, Adapter oder Workflow-Rolle;
+  - spezialisierte Coding-/Web-/SQL-/Reviewer-Komponenten bearbeiten Teilaufgaben;
+  - Validatoren pruefen Ergebnisse;
+  - Memory/Kontext haelt Aufgabenstand und Entscheidungen.
+- Coding-Domaenen muessen mindestens Python, Web/Frontend, Backend/API und SQL/SQLite beruecksichtigen. SQL ist nicht optional, weil portable Apps Einstellungen und Laufzeitdaten oft lokal speichern muessen.
+- Adapter/LoRA koennen spaeter als Soft-MoE-Variante geprueft werden, sind aber keine Startvoraussetzung.
+- Konkrete Umsetzung erst nach Hardware-Inventar pruefen: CPU/RAM/VRAM, Modellserver, Runtime, Netzwerk, OS, Strom/Kuehlung, Wartbarkeit und Tool-Faehigkeit.
+
 ## Offene Pruefpunkte
 
 - Welche lokalen Llama.App-Modelle decken aktuell `creative/draft` ab?

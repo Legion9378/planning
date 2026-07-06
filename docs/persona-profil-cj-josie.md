@@ -2,7 +2,7 @@
 
 > Historie: Dieses Profil basiert auf der urspruenglichen PA-Persona aus Version 1.2. Die 32-jaehrige Ursprungsfigur wurde nach dem ersten passenden Avatar bewusst juenger angepasst, weil CJ visuell eher Anfang 20 wirkte. Die alte Version bleibt Herkunftsquelle, ersetzt aber nicht dieses aktuelle Profil.
 >
-> Infrastrukturstand: CJ ist die einzige Persona, die weiterhin als lokale KI beziehungsweise Hermes-Agent im KI-Netzwerk existieren soll. Josie war zeitweise als eigener Hermes-Agent auf dem Laptop geplant, wurde aber nach dem unpraktischen Gemma-4-e4B-Edge-Test verworfen. Josie und Daphne koennen spaeter als Audio-Book-Host oder Video-Host genutzt werden, sind aber keine eigenen lokalen Agenten.
+> Infrastrukturstand: CJ ist die Haupt-KI des KI-Netzwerks. Josie ist die Netzwerk- und Systemadmin-Persona fuer Installation, Wartung, Monitoring und Incident Response auf den KI-Netzwerk-Nodes; nach OS-Grundinstallation erhaelt Josie vollen SSH-Zugriff auf die Nodes. Die technische Zielarchitektur basiert auf Hermes-Agent + Paperclip mit eigenem Agentic-Layer und Orchestrator. Die fiktionale Schwestern-Dynamik zwischen CJ und Josie bleibt erhalten.
 
 ## 1. Basisdaten
 

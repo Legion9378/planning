@@ -68,6 +68,65 @@
 - TTS-Regie ist sprachspezifisch: Deutsche und englische Fassungen brauchen eigene Aussprache-, Betonungs-, Pausen- und Sprecherhinweise statt blinder Uebernahme aus der jeweils anderen Sprache.
 - TTS-/Voice-Reader-Woerterbuecher muessen gegen die konkrete Ziel-App-Syntax formatiert werden. Keine Standardannahmen uebernehmen: erst Doku oder funktionierendes Beispiel pruefen, dann mit 2-3 Eintraegen testimportieren, danach groessere Listen erzeugen. Fuer Voice Dream Reader ist jeder Eintrag als eigene Zeile noetig; zusammengeklebte Eintraege oder nicht akzeptierte Kommentarzeilen verhindern den Import.
 
+
+### Masterdraft, TTS-Tags und kontextabhaengige Aussprache
+
+- Quelle: Chat-History `chatgpt-youtube-video-analyse-2026-05-07T03-13-02-534Z.md`.
+- Ein Masterdraft darf sparsame TTS-Tags enthalten, muss aber weiterhin wie ein normaler Originaltext lesbar bleiben.
+- Aus dem Masterdraft entstehen zwei Outputs:
+  - TTS-Version: Aussprache-, Rhythmus- und Pausenoptimierung fuer Audio;
+  - Clean-Kapitel/Roman-Version: geglaettet, ohne TTS-Tags, mit originaler Schreibweise.
+- Minimaler Start-Tag-Satz:
+  - `[TTS:pause=short]`
+  - `[TTS:pause=long]`
+  - `[TTS:pronounce=Name->Aussprache]`
+  - `[TTS:emphasis=word]`
+  - `[TTS:speed=slow]`
+- Tags werden sparsam gesetzt: Namen, problematische Aussprache, Pausen, Schluesselstellen. Keine Tags in jeden Satz und keine erzwungene Emotionssteuerung.
+- Aussprache-Mapping ist kontextabhaengig, nicht nur wortbasiert. Dasselbe Schriftbild kann je nach Figur, Geschlecht, Canon oder Sprache anders ausgesprochen werden.
+  - Beispiel: `Jean-Luc Picard` und `Jean Delacour` -> maskulin/franzoesische Aussprache.
+  - Beispiel: `Jean Grey` -> feminin/englische Aussprache.
+- Ausspracheersetzungen gelten nur fuer die TTS-Version. Die Clean-Kapitelversion behaelt die korrekte Originalschreibweise.
+- Vor Massenerzeugung muessen TTS-Tags und Pronunciation-Mappings gegen das konkrete Zieltool getestet werden.
+
+
+### Drei-Sprecherinnen-Szenenlesung fuer Audio und Video
+
+- Quelle: Chat-History `chatgpt-zusammenfassung-der-konversation-2026-05-07T08-35-19-932Z.md` plus Bjoerns Korrektur.
+- Fuer Story-Vertonungen sind drei Sprecherinnen/Hosts geplant: CJ, Josie und Daphne.
+- Startziel ist keine komplexe Multispeaker-Dialogproduktion mit vielen Figurenstimmen, sondern eine szenenweise Lesung:
+  - eine Sprecherin liest eine Szene;
+  - pro Szene werden emotionale Einstellungen gesetzt;
+  - leicht hoerbare Atempausen duerfen zur Natuerlichkeit beitragen;
+  - danach Wechsel zur naechsten Szene/Sprecherin.
+- Vorteil: Die TTS-Synthese bleibt einfacher, weil nicht innerhalb jeder Szene staendig Sprecherrollen gewechselt werden muessen.
+- Produktionslogik:
+  1. Szene als eigenen Audio-Chunk rendern.
+  2. Emotion, Tempo, Pausen und Aussprache pro Szene pruefen.
+  3. Szenen-Audios zusammenlegen.
+  4. Ambientsound/Hintergrundatmo darunterlegen.
+  5. Die finale Audiospur als Vorlage fuer das Video verwenden.
+- Tooling fuer Zusammenlegen/Mixing bleibt offen: ffmpeg, Audacity, pydub oder spaeter passende Pipeline-Tools pruefen.
+- Konkrete TTS-Modelle/Provider werden nicht aus alten Coqui-/YourTTS-/Bark-/XTTS-Listen uebernommen, sondern frisch gegen Qualitaet, Kosten, Wartbarkeit, Stimmeignung und Deutsch/Englisch getestet.
+
+
+### Voice-Cloning-Grenzen und charakterbasierte Stimmen
+
+- Quelle: Chat-History `chatgpt-hailo-10-hat-pi-5-2026-05-07T01-46-48-306Z.md`.
+- Standard fuer Story-/Audiobook-Stimmen sind generische, selbst gestaltete oder charakterbasierte Stimmen, nicht erkennbare Imitationen realer Personen.
+- Fuer CJ, Josie und Daphne sollen eigene charakterbasierte Stimmen entstehen; sie duerfen nicht nach bekannten Sprecherinnen, Schauspielerinnen oder anderen realen Personen benannt oder vermarktet werden.
+- Voice-Cloning ist nur in klar legitimen Faellen akzeptabel:
+  - Bjoern nutzt seine eigene Stimme mit eigener Stimmprobe;
+  - eine Person hat ausdruecklich zugestimmt;
+  - assistive Nutzung mit klarer Zweckbindung, z. B. bessere Verstaendlichkeit fuer die betroffene Person;
+  - keine Taeuschung ueber Identitaet oder Urheberschaft.
+- Nicht erlaubt als Default:
+  - Stimmen realer Personen ohne Zustimmung nachbauen;
+  - Marketing wie "klingt wie <bekannte Person>";
+  - absichtliche Annaherung an reale Sprecherinnen/Sprecher;
+  - Voice-Cloning als Ersatz fuer Rechteklaerung.
+- Generische TTS-Stimmen und leichte Anpassungen von Pitch, Tempo oder Klangfarbe innerhalb einer nicht-identitaetsnahen Stimme sind der risikoaermere Standard.
+
 ## 5. Video Production
 - Avatar-Bild (sitzend im Sessel)
 - Statische Hintergrundbilder pro Szene

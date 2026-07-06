@@ -115,3 +115,13 @@ Uebernommen wird nur die Architekturregel:
 - Automatische DietPi-Wartungsroutinen sind irrelevant, weil DietPi nicht weiter genutzt wird.
 - watcion.eu/Gitea/externe Erreichbarkeit bleibt offen, bis Tailscale Funnel getestet wurde.
 - Timber wird nicht als Tool-Kandidat fuer das KI-Netzwerk uebernommen.
+
+## Workstation/Admin-Rechner vs. KI-Netzwerk-Node
+
+- Quelle: Chat-History `chatgpt-image-vorbereitung-arm-rechner-2026-05-07T01-34-14-423Z.md`.
+- Regel: Bjoerns lokaler Laptop oder eine lokale Workstation ist nicht automatisch ein KI-Netzwerk-Node.
+- Workstation-/Admin-/Build-/Client-Rollen muessen strikt von Netzwerk-Node-Rollen getrennt werden.
+- Ein Geraet wird nur dann als KI-Netzwerk-Node behandelt, wenn diese Rolle aktuell explizit bestaetigt wurde.
+- Alte MOSIX2-/SSI-/LocalAI-/LM3H-/Pi400-Clusterannahmen aus dieser Quelle sind historisch und werden nicht in die aktuelle Hermes-Agent-/Paperclip-Netzwerkplanung uebernommen.
+- Historische Zuständigkeitsnotizen wie "DeepSeek richtet den Laptop ein" gelten nicht als heutige Betriebsregel fuer Josie; aktuelle Aufgaben zaehlen.
+
