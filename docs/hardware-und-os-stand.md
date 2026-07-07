@@ -24,8 +24,12 @@ Diese Datei sammelt den aktuellen Hardware- und Betriebssystemstand. Aeltere Cha
 
 ### Zweiter Pi 4 NAS
 
-- Rolle: NAS, voraussichtlich OMV-basiert.
+- Hostname: `nas-pi`.
+- Admin/User fuer Setup: `nas`.
+- Rolle: NAS, OMV-basiert.
+- Soll spaeter USB-Festplatten zusammenfassen und fuer bestimmte Aufgaben/Freigaben bereitstellen.
 - Keine aktive KI-Rolle.
+- Passwoerter werden nicht in Planning/KB dokumentiert.
 
 ### RK3588-Rechner
 

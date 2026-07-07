@@ -132,3 +132,20 @@ Wenn KI-Netzwerk-Softwareaufbau beginnt, wiederkehrende Schritte als Loops behan
 - SD1.5/Coqui/XTTS-Konkretnamen als aktuelle Auswahl.
 - Mac Mini als TTS-Worker aus dieser alten Liste.
 - Ubuntu-24.04-Annahmen als aktueller Standard.
+
+## Headless-/SSH-First bei Node-Setup und Flashing
+
+Quelle: Chat-History `chatgpt-ki-server-aus-altgerat-2026-05-07T01-16-24-838Z.md`.
+
+- Bei Server-/Node-/Build-/Flash-Systemen zuerst pruefen, ob der gesamte Ablauf headless per SSH erledigt werden kann.
+- Monitor, Tastatur und Maus nicht als Setup-Voraussetzung einplanen, wenn der Zielhost per SSH erreichbar und administrierbar ist.
+- Vor Flash-/Build-Aufgaben pruefen:
+  - Zielhost per SSH erreichbar;
+  - benoetigte USB-/OTG-/Backplane-/serielle Geraete werden vom Zielhost erkannt;
+  - Logs, Fehlerausgaben und Recovery-Pfad sind verfuegbar;
+  - Herstellerdoku fuer Flashmodus/Bootmodus liegt vor;
+  - ein lokaler physischer Eingriff ist nur Plan B, nicht Default.
+- Korrektur: Der damals als Alder-Lake-Rechner bezeichnete Rechner stellte sich spaeter als Jasper Lake/N5105 heraus; das war ein Beschreibungsfehler des asiatischen Verkaeufers.
+- LM3H-/NanoCluster-Hardware ist noch vorhanden, aber aktuell nicht eingeplant. Falls sie spaeter wieder relevant wird: LM3H nicht wie Raspberry-Pi-Boards behandeln; eMMC/USB/OTG/Backplane-Flashweg frisch anhand Herstellerdoku pruefen.
+- Alte LocalAGI-/SSI-/Alder-Lake-Master-Node-Annahmen nicht uebernehmen.
+
