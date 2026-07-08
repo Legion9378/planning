@@ -52,3 +52,48 @@ Mehr Worker erhoehen nicht nur parallele Kapazitaet, sondern auch die Rotationsg
 ## Aktueller Architekturrahmen
 
 Diese Regel wird spaeter auf das aktuelle KI-Netzwerk-Ziel angewendet: Hermes-Agent + Paperclip mit eigenem Agentic-Layer und Orchestrator; CJ als Haupt-KI, Josie als Netzwerk-/Systemadmin.
+
+## Worker-Klassen und Infrastruktur-/Compute-Trennung
+
+Quelle: Chat-History `chatgpt-linkanalyse-und-alternativen-2026-05-07T02-27-54-557Z.md`; aktualisiert durch Bjoerns Korrektur vom 2026-07-08.
+
+### Grundregel
+
+Parallelitaet entsteht im KI-Netzwerk nicht dadurch, dass der Scheduler beliebig komplexer wird, sondern durch mehrere passende Worker/Runner, die Jobs parallel in ihren eigenen Grenzen bearbeiten koennen.
+
+Der Orchestrator muss spaeter entscheiden koennen:
+
+- welche Worker/Runner verfuegbar sind;
+- wie viel RAM/CPU/NPU/IO sie haben;
+- welche Modell-/Tool-Backends dort sinnvoll laufen;
+- welche Jobs leicht, mittel, schwer oder toolbasiert sind;
+- welche Nodes Infrastruktur tragen und deshalb nicht mit Modelllast belastet werden sollen.
+
+### Trennung
+
+- Infrastruktur-/Support-Nodes: Orchestrierung, Datenbank/Knowledge, Toolserver, Queue-/Status-/Bridge-Dienste. Diese Nodes sollen keine schweren Modelle laden.
+- Compute-/Model-Worker: Modellserver/Runner fuer leichte, mittlere oder schwere Modelljobs. Konkrete Zuordnung bleibt spaeter zu testen.
+
+### Aktuelle Rollen-Korrektur
+
+- N4000: FalkorDB-Kandidat/-Host fuer Graph-/Vector-nahe Knowledge-/Memory-Aufgaben.
+- RK3588: Hermes-Agent-Instanz ohne Modell-Backend. Die NPU bleibt Pruefkontext, aber dieser Node wird nicht automatisch als Modellrunner geplant.
+- Pi 5: kann als Orchestrator die selbstgebaute Paperclip-Alternative mit eigenem Agentic-Layer tragen.
+- N5109: ToolServer. Aeltere N5105/Jasper-Bezeichnungen aus Quellen muessen gegen den realen Geraetestand geprueft werden; die aktuelle Korrektur setzt die ToolServer-Rolle, nicht eine Modellrunner-Rolle.
+- Restliche Compute-/Runner-Aufteilung wird spaeter ausgetueftelt und nicht aus dieser Quelle final uebernommen.
+
+### Worker-Klassen als Planungsmodell
+
+- Light: kurze Analysen, Klassifikation, kleine Hilfsmodelle oder toolnahe Vorverarbeitung — nur falls ein dafuer geeigneter Runner/Node bestaetigt ist.
+- Medium: laengere Textanalyse, Story-/Planungsjobs, Standard-LLM-Aufgaben — spaeter gegen RAM/Runtime pruefen.
+- Heavy: grosse Reasoning-/Analyse-/Pipeline-Jobs — nur auf ausreichend dimensionierten Modellservern.
+- Tool-only: Skripte, Parser, API-Bridges, Pre-/Postprocessing ohne lokales Modell-Backend.
+
+### Nicht final uebernehmen
+
+- OpenClaw als aktueller Orchestrator.
+- Pi400/VPS-Control-Plane aus der alten Quelle.
+- SurrealDB als konkrete DB-Entscheidung.
+- 2h/10m als harte finale Zeitregel.
+- Alte konkrete Node-Zuweisungen als finaler Stand, soweit sie durch neuere Rollenplanung oder Bjoerns Korrektur ersetzt wurden.
+

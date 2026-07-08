@@ -54,3 +54,7 @@ Bjoerns lokale Agenten- und Story-Workflows sollen nicht auf ein einziges "perfe
 - Welches Modell/Provider-Profil ist fuer `structure/reasoning` auf dem Laptop vs. im KI-Netzwerk sinnvoll?
 - Welche Tasks brauchen zwingend Tool-Faehigkeit und sollten beim Hermes-Hauptmodell bleiben?
 - Wie wird die Rollenwahl in Hermes-Konfig, Skills oder Jobflow-Templates praktisch abgebildet?
+
+## Zusatzregel: neue Modelle
+
+- Neue Modelle stets auf Spezialisierung und moeglichen RAM-Verbrauch untersuchen; keine Modellfamilie oder Benchmark-Behauptung ersetzt konkrete Laufbarkeits- und Rollenpruefung.

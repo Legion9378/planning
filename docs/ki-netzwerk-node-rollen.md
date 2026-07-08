@@ -33,33 +33,34 @@ Hardware- und OS-Details stehen in `docs/hardware-und-os-stand.md`.
 
 ### RK3588-Rechner
 
-- Rolle: eigene Hermes-Agent-Instanz fuer CJ.
+- Rolle: eigene Hermes-Agent-Instanz fuer CJ, ohne Modell-Backend.
 - 8 GB RAM.
 - Bleibt auf Ubuntu 22.04 wegen Rockchip-NPU-Tools.
 - NPU ist ein Pruefkontext fuer Spezialaufgaben, aber keine gesetzte LLM-/RWKV-/RNN-Beschleunigung.
 - Die fruehere VPS/OpenClaw-Rolle wird nicht als VPS-Abhaengigkeit gelesen: CJ bekommt hier eine eigene Hermes-Agent-Instanz.
+- Nicht automatisch als Lightweight-Modellrunner planen; Modell-Backends laufen spaeter auf separat geeigneten Runner-/Compute-Nodes.
 
 ### Pi 5 8 GB
 
-- Rolle: Paperclip-aehnliche Firmenstruktur mit CJ als CEO.
+- Rolle: Orchestrator fuer die selbstgebaute Paperclip-Alternative mit eigenem Agentic-Layer.
 - Kein Modellrunner, solange das Geraet unter 16 GB RAM bleibt.
 - Umsetzung ist eigene lokale Struktur, nicht Paperclip als Softwarepflicht.
-- Moegliche spaetere Aufgaben: Orchestrierung, Firmen-/Jobflow-Struktur, Status, Trigger, Queue oder Gateway-nahe Funktionen.
+- Moegliche Aufgaben: Orchestrierung, Firmen-/Jobflow-Struktur, Status, Trigger, Queue, Gateway-nahe Funktionen und CJ-CEO-Struktur.
 
 ### Bmax B1 Pro / Gemini Lake N4000
 
-- Rolle: FalkorDB-Host bei Bedarf.
-- Zweck: Vector DB plus Graph in einem, wenn Graph plus Vector produktiv gebraucht werden.
+- Rolle: FalkorDB-Kandidat/-Host fuer Graph-/Vector-nahe Knowledge-/Memory-Aufgaben.
+- Zweck: Graph plus Vector, wenn produktiv gebraucht.
 - 8 GB RAM.
 - Systemdisk: ca. 370-380 GB.
 - Kein Modellrunner unter aktueller RAM-Regel.
 - FalkorDB bleibt Bedarfskandidat, kein Startzwang.
 
-### Intel N5105 / Jasper Lake
+### Intel N5109 / Jasper-Lake-Toolserver
 
 - Rolle: Tool- und Script-Server.
 - 8 GB RAM.
-- `Jasper` bezeichnet diesen Rechner wegen Jasper-Lake-Generation.
+- Hinweis: Aeltere Quellen/Notizen nennen teils N5105/Jasper; Bjoerns aktuelle Korrektur fuer diese Rolle lautet N5109 ToolServer. Reale CPU-Bezeichnung bei Hardwarezugriff pruefen.
 - Kein Modellrunner unter aktueller RAM-Regel.
 - Aufgaben muessen als leichte Dienste, Tools, Bridge, Queue-Hilfen oder andere nicht-inferenzlastige Funktionen geplant werden.
 

@@ -34,14 +34,14 @@ Diese Datei sammelt den aktuellen Hardware- und Betriebssystemstand. Aeltere Cha
 ### RK3588-Rechner
 
 - 8 GB RAM.
-- Rolle: eigene Hermes-Agent-Instanz fuer CJ.
+- Rolle: eigene Hermes-Agent-Instanz fuer CJ, ohne Modell-Backend.
 - Ubuntu 22.04 bleibt installiert.
 - Grund: vorinstallierte und zusaetzlich installierte Tools fuer die Rockchip-NPU.
 - NPU bleibt Pruefkontext fuer Spezialaufgaben, keine gesetzte LLM-Beschleunigung.
 
 ### Pi 5 8 GB
 
-- Rolle: Paperclip-aehnliche Firmenstruktur mit CJ als CEO.
+- Rolle: Orchestrator fuer die selbstgebaute Paperclip-Alternative mit eigenem Agentic-Layer und CJ-CEO-Struktur.
 - 8 GB RAM.
 - Kein Modellrunner unter aktueller RAM-Regel.
 
@@ -49,16 +49,16 @@ Diese Datei sammelt den aktuellen Hardware- und Betriebssystemstand. Aeltere Cha
 
 - 8 GB RAM.
 - Systemdisk: ca. 370-380 GB.
-- Rolle: FalkorDB bei Bedarf, wenn Graph plus Vector produktiv gebraucht werden.
+- Rolle: FalkorDB-Kandidat/-Host fuer Graph-/Vector-nahe Knowledge-/Memory-Aufgaben.
 - Zur eindeutigen Abgrenzung vom BMAX B6 Pro ueber `BMAX B1 Pro` oder `Gemini Lake N4000` benennen.
 - Kein Modellrunner unter aktueller RAM-Regel.
 - Alte Angaben von ca. 470-480 GB Systemdisk waren eine fehlerhafte Erkennung und sind verworfen.
 
-### Intel N5105 / Jasper Lake
+### Intel N5109 / Jasper-Lake-Toolserver
 
 - 8 GB RAM.
 - Rolle: Tool- und Script-Server.
-- Wird allgemein `N5105` oder `Jasper` genannt, weil die CPU-Generation Jasper Lake ist.
+- Hinweis: Aeltere Quellen/Notizen nennen teils N5105/Jasper; Bjoerns aktuelle Korrektur fuer diese Rolle lautet N5109 ToolServer. Reale CPU-Bezeichnung bei Hardwarezugriff pruefen.
 - Kein Modellrunner unter aktueller RAM-Regel.
 
 ### BMAX B6 Pro
@@ -134,3 +134,16 @@ Diese Datei sammelt den aktuellen Hardware- und Betriebssystemstand. Aeltere Cha
 - Alte 4-GB-RAM-Angaben fuer den Mac Mini sind ueberholt.
 - Xubuntu/Ubuntu-Server-24.04-Annahmen aus aelteren Chat-History-Dateien sind nicht der aktuelle Standard.
 - VPS fuer dauerhaft online laufenden Hermes-Agent ist gestrichen, um Extrakosten zu sparen.
+
+## Heimnetz-Namensaufloesung und DHCP
+
+Quelle: Chat-History `chatgpt-lan-scanner-fur-ubuntu-2026-05-07T01-31-16-958Z.md`.
+
+- Primaere Namensquelle im Heimnetz ist die FRITZ!Box.
+- Geraete sollen sinnvolle Hostnames bekommen und im Alltag ueber `hostname.fritz.box` angesprochen werden.
+- IP-Adressen sind Fallback/Diagnosewert, nicht die eigentliche Identitaet eines Nodes.
+- Statische IPs werden nicht als Default erzwungen; sie kommen nur bei echtem Bedarf zum Einsatz.
+- Bjoerns Wartungsstrategie gegen IP-Wechsel sind sehr lange DHCP-Leases in der FRITZ!Box.
+- Korrektur: Mit FRITZ!Box 7690 und aktuellem FRITZ!OS sind nicht mehr 10000 Tage, sondern maximal 3650 Tage DHCP-Lease moeglich, also knapp 10 Jahre.
+- SSH-/Service-Konfigurationen sollen bevorzugt Hostnames verwenden; konkrete IPs nur als Fallback dokumentieren.
+
