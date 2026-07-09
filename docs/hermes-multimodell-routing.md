@@ -58,3 +58,21 @@ Bjoerns lokale Agenten- und Story-Workflows sollen nicht auf ein einziges "perfe
 ## Zusatzregel: neue Modelle
 
 - Neue Modelle stets auf Spezialisierung und moeglichen RAM-Verbrauch untersuchen; keine Modellfamilie oder Benchmark-Behauptung ersetzt konkrete Laufbarkeits- und Rollenpruefung.
+
+## Kontextfenster, KV-Cache und lokale Laufbarkeit
+
+Quelle: Chat-History `chatgpt-localai-setup-optimierung-2026-05-07T03-11-36-906Z.md`, reduziert am 2026-07-09.
+
+- Kontextgroesse ist eine Ressource, nicht nur ein Feature.
+- Long-Context-Angaben wie 128k, 256k oder 1M duerfen lokal nicht blind uebernommen werden.
+- Vor Einsatz pruefen:
+  - KV-Cache-RAM;
+  - Modellgroesse und Quantisierung;
+  - Runtime/Backend-Konfigurierbarkeit;
+  - RAM-Bandbreite und Latenz;
+  - Netzwerk-Sync bei verteilten Setups;
+  - Antwortzeit und Stabilitaet auf der Zielhardware.
+- Grosse Kontextfenster koennen auf CPU-/Low-Power-/heterogener Hardware langsamer, instabiler oder praktisch unbrauchbar sein, selbst wenn das Modell theoretisch damit wirbt.
+- Kontextlimit ggf. bewusst niedriger setzen, wenn Stabilitaet, Token-Speed oder RAM-Druck wichtiger sind als maximaler Kontext.
+- Kontextgroesse gehoert zur Modell-/Runtime-Konfiguration und darf nicht als beliebig dynamische Jobflow-Option angenommen werden.
+

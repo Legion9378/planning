@@ -200,7 +200,8 @@ Jeder neue Artikel oder Toolvorschlag muss zusaetzlich durch den Low-Budget-/CPU
   - LoRA-Abhaengigkeiten in CJ wuerden beim Fallback Inkonsistenz erzeugen und Debugging erschweren.
 - Subagenten-Regel:
   - Subagenten duerfen LoRAs nutzen, wenn sie lokal/spezialisiert laufen und kein identischer externer Fallback gefordert ist.
-  - LoRAs dienen dort als Kontext-Kompression, Stil-/Fachwissens-Spezialisierung oder Faehigkeitsoptimierung.
+  - LoRAs dienen dort hoechstens als Kontext-Kompression, Stil-/Fachwissens-Spezialisierung oder Faehigkeitsoptimierung, aber nicht als primaerer Speicher fuer Story-Lore oder Projektregeln.
+  - Fuer Multi-Crossover und Original-Story ist Vault-/Prompt-/Richtlinien-first der bevorzugte Pfad: The-Novelist-/Obsidian-Struktur, Story-Bible, Lore, Timeline, Figurenkarten und Projektregeln werden geladen und durch Prompts verbindlich gemacht.
   - Rechte, Governance, Review- und Approval-Regeln duerfen nicht ausschliesslich in Modellgewichten versteckt werden.
 - Architekturcheck:
   - Laeuft die Komponente auch extern? Wenn ja, keine lokalen modellgebundenen Abhaengigkeiten.

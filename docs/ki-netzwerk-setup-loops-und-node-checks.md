@@ -51,7 +51,7 @@ Aktuelle Uebernahme:
 - Manuelle lokale Bildmodell-Tests auf dem Laptop bleiben moeglich.
 - Das gilt als Werkbank-/Experimentierpfad, nicht als produktiver KI-Netzwerk-Worker.
 - Konkrete Modelle wie DreamShaper, Anything, Realistic Vision oder SD1.5-Basis werden nicht automatisch uebernommen; aktuelle Modell-, Lizenz- und Toolpruefung ist Pflicht.
-- Aktuelle Bildworkflow-Planung separat beachten: EasyDiffusion historisch/manuell, ComfyUI-CPU als API-faehiger Kandidat, keine SD-Last auf kleinen 8-GB-Workern als Default.
+- Aktuelle Bildworkflow-Planung separat beachten: EasyDiffusion laeuft auf dem HP EliteBook manuell per Browser-WebUI relativ gut, wenn auch langsam, hat aber keine API/Webhooks fuer Josie/CJ/Agenten; ComfyUI-CPU bleibt API-faehiger Kandidat; keine SD-Last auf kleinen 8-GB-Workern als Default.
 
 ### Punkt 8: Lokale TTS-Tests auf dem Laptop
 

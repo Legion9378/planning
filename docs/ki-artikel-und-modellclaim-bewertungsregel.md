@@ -124,3 +124,7 @@ Deshalb ist ein einzelnes Modell selten die ganze Architektur. Fuer Bjoerns KI-N
 - Page Index als fertige Implementierung, falls nicht separat gebaut/geplant.
 - Shimi oder Backend-Komponenten aus dem Chatbeginn ohne frische Pruefung.
 - Mac-Mini-/5-6-Node-Details aus der PDF-Frage als aktuelle Architektur.
+
+### Long-Context-Claims
+
+Long-Context-Angaben wie 128k, 256k oder 1M Kontext sind Modell-/Cloud-/Benchmark-Claims und keine lokale Laufbarkeitsgarantie. Vor Uebernahme immer KV-Cache, RAM, Bandbreite, Runtime-Konfiguration, Zielhardware und Geschwindigkeit pruefen. Kontext ist eine Ressource, nicht nur ein Feature.

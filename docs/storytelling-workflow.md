@@ -182,7 +182,7 @@ Weitere Details werden ergänzt.
 - Positive Prompt wird modular aus `STYLE_CORE + FOCUS_PROFILE + SCENE_CONTENT` aufgebaut.
 - Negative Prompt enthaelt nur unerwuenschte Merkmale und wird nicht mit positiven Stil-/Szenenteilen vermischt.
 - Fuer EasyDiffusion gilt: Positive Prompt und Negative Prompt jeweils einzeilig halten; jede neue Zeile wird als neues Bild interpretiert.
-- EasyDiffusion unterstuetzt CPU, bietet aber keine API/Webhooks fuer Josie. ComfyUI-CPU ist als naechster API-faehiger Bildworkflow-Pfad vorgesehen.
+- EasyDiffusion laeuft auf dem HP EliteBook ueber CPU relativ gut, wenn auch langsam, bleibt aber manuell: Browser-Tab/WebUI, keine API und keine Webhooks fuer Josie/CJ/Agenten. ComfyUI-CPU ist als naechster API-faehiger Bildworkflow-Pfad vorgesehen.
 - Detailregel: `planning/docs/image-generation-prompt-field-structure.md`.
 
 ## 11. Content-Werkbank fuer Story, YouTube, Audiobook, Medium und Substack
@@ -231,3 +231,39 @@ Weitere Details werden ergänzt.
 - Rollen: creative/draft, structure/reasoning, agent/tools, validator/reviewer.
 - Konkrete Deckard-/Heretic-/Gemma-/Hermes-Modellnamen aus alten Chats sind nur historische Kandidaten und muessen vor Einsatz frisch gegen Hardware, Runtime, Lizenz, Kontextfenster und Qualitaet geprueft werden.
 - Private Rohentwuerfe duerfen andere Modelle nutzen als oeffentliche Fassungen; YouTube-/Publishing-Fassungen brauchen Rewrite und Review auf Zielstufe.
+
+## 11. Story-Wissen: Vault-/Prompt-first statt LoRA-first
+
+Quelle: Chat-History `chatgpt-llm-training-und-anpassung-2026-05-07T01-07-22-413Z.md`, reduziert durch Bjoerns Korrektur vom 2026-07-09.
+
+- LoRAs sind fuer Multi-Crossover und Original-Story nicht mehr als bevorzugte Story-Strategie gesetzt.
+- Grund: Beim Multi-Crossover muessten fuer viele Fandoms, Arcs, Figuren, Regeln und Stilvarianten schnell sehr viele LoRAs gebaut und eingebunden werden, nur um ein weiteres Kapitel generieren zu lassen.
+- Besserer Zielpfad: ein angepasstes Obsidian-Vault auf Basis von `The Novelist` als kuratierte Story-Bible, Lore-, Richtlinien-, Timeline-, Figuren- und Kapitelplanungs-Schicht.
+- Das gilt sowohl fuer Multi-Crossover als auch fuer Original-Story.
+- Generierungs-Prompts muessen vorgeben, dass die fuer das konkrete Projekt relevanten Richtlinien, Lore-Notizen, Figurenkarten, Timeline-/Arc-Regeln und Kapitel-/Reihenfolge-Informationen aus dem Vault/Planning zwingend beachtet werden.
+- Vor neuer Kapitel-/Story-Generierung muss der Planer-Agent zuerst den vorhandenen Projektstand und die bekannte Reihenfolge laden, statt blind ein neues Kapitel oder eine neue Story anzufangen.
+- Falls die konkrete Story-Erstellungsreihenfolge nicht im aktuellen Kontext sichtbar ist, muss sie aus Planning, Repo, LLM-Wiki, Obsidian-Vault, Session-Historie und ausdruecklich auch aus Audiobook-/TTS-/Story-Jobflow-Dokumenten gesucht werden; nicht neu erfinden.
+- LoRA/QLoRA bleibt hoechstens spaeterer Spezialfall fuer eng begrenzte lokale Subagenten oder Experimente, nicht Fundament der Story-Kontinuitaet.
+- Trainingsdaten muessen eigene oder rechtlich saubere Texte sein; fremde Fanfiction-/Reddit-/Untertitel-Scrapes werden nicht als Default uebernommen.
+
+## 12. Verbindliche Story-Produktionsreihenfolge ausser Medium/Substack
+
+Quelle: bereits vorhandene Repo-Workflows `Multi-Crossover/workflow/story-production-workflow.md`, `Original-Story/workflow/story-production-workflow.md`, `YouTube-Content/workflow/story-production-workflow.md`; durch Bjoern am 2026-07-09 bestaetigt.
+
+Diese Reihenfolge gilt fuer alle Story-Projekte, die kein Medium- oder Substack-Content sind.
+
+1. Erste Szenen-/Kapitelversion auf Englisch, ebooknah geschrieben, aber mit zusaetzlichen TTS-Tags/Hinweisen.
+2. Daraus eine reine Ebook-/Lesefassung ohne TTS-Tags erstellen.
+3. Daraus eine eigene TTS-Script-/Vertonungsfassung mit passenden TTS-Markern, Pausen-, Betonungs- und Aussprachehinweisen erstellen.
+4. Danach die erste Version auf PG13-PG16 umschreiben.
+5. Zusaetzlich eine deutsche PG13-PG16-Uebersetzung erstellen.
+6. Aus der englischen PG13-PG16-Fassung wiederum Ebook-Fassung und TTS-Script erstellen.
+7. Aus der deutschen PG13-PG16-Fassung wiederum Ebook-Fassung und TTS-Script erstellen.
+8. QA/Review/Iteration, bis Geschichte, Kapitel oder Folge fertig ist.
+
+Wichtig:
+
+- Medium- und Substack-Content folgt eigenen Artikel-/Newsletter-Workflows und ist von dieser Story-Produktionsreihenfolge ausgenommen.
+- Diese Reihenfolge ist Produktionslogik, nicht Lore-/Planungslogik. Vor Schritt 1 muessen Story-Bible/Vault, Lore, Figuren, Timeline, Arc-Stand und Projekt-Reihenfolge geladen werden.
+- Die vorhandenen Repo-Workflow-Dateien sind die konkrete Ausfuehrungsreferenz; diese Planning-Notiz ist die zentrale Erinnerung fuer spaetere Agenten/Planer.
+
