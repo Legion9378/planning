@@ -6,6 +6,8 @@ Diese Datei ist der aktuelle Planungsstand fuer die Rollen der vorhandenen Netzw
 
 Hardware- und OS-Details stehen in `docs/hardware-und-os-stand.md`.
 
+Aktuelle Rollenbestätigung vom 2026-10-07: [Hardware-Info KI-Netzwerk](hardware-info-ki-netzwerk.md). Bei abweichenden älteren Rollenangaben gilt dieser Owner-Review; Planungsrolle und tatsächlich eingerichteten Dienst getrennt behandeln.
+
 ## Grundregeln
 
 - Unter 16 GB RAM wird vorerst kein Modellrunner geplant, ausser Björn setzt explizit eine Spezialrolle.
@@ -22,7 +24,7 @@ Hardware- und OS-Details stehen in `docs/hardware-und-os-stand.md`.
 
 - Rolle: Webserver.
 - Soll perspektivisch Self-Hosted-Dienste tragen, soweit das Webserver-Konzept/funnelbasierte Erreichbarkeit passt.
-- Geplante Dienste im Self-Hosted-Kontext: Nextcloud, Gitea und WordPress-basierte Website.
+- Owner-Review 2026-10-07: WordPress weiterhin geplant; Gitea eventuell wieder als Kandidat; Nextcloud nur „vielleicht“, nicht als gesetzter Dienst. Keine Installation oder öffentliche Freigabe aus dieser Einordnung ableiten.
 - Keine KI-Instanz.
 
 ### Zweiter Pi 4 NAS
@@ -42,10 +44,10 @@ Hardware- und OS-Details stehen in `docs/hardware-und-os-stand.md`.
 
 ### Pi 5 8 GB
 
-- Rolle: Orchestrator fuer die selbstgebaute Paperclip-Alternative mit eigenem Agentic-Layer.
+- Frühere Rolle: Orchestrator fuer die selbstgebaute Paperclip-Alternative mit eigenem Agentic-Layer. Owner-Korrektur 2026-10-07: Wenn CJ als Company erstellt wird, ist die Rolle des Pi 5 offen.
 - Kein Modellrunner, solange das Geraet unter 16 GB RAM bleibt.
 - Umsetzung ist eigene lokale Struktur, nicht Paperclip als Softwarepflicht.
-- Moegliche Aufgaben: Orchestrierung, Firmen-/Jobflow-Struktur, Status, Trigger, Queue, Gateway-nahe Funktionen und CJ-CEO-Struktur.
+- Historische mögliche Aufgaben: Orchestrierung, Firmen-/Jobflow-Struktur, Status, Trigger, Queue, Gateway-nahe Funktionen und CJ-CEO-Struktur; unter der genannten Bedingung keine dieser Rollen ohne neue Entscheidung vergeben.
 
 ### Bmax B1 Pro / Gemini Lake N4000
 

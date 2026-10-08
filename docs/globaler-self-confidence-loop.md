@@ -1,6 +1,6 @@
 # Globaler Self-Confidence Loop und Modell-Validierung
 
-Stand: 2026-06-23
+Stand: 2026-10-07 (HP-Verfügbarkeit korrigiert; Architekturziel unverändert)
 Quelle: `/home/work/Archiv_entpackt/KI 2/Chathistory/chatgpt-planer-und-cot-risiken-2026-05-07T02-23-09-981Z.md`
 
 ## Entscheidung
@@ -64,9 +64,15 @@ Vor Festlegung muss geprueft werden:
 
 Diese Modellnamen duerfen nicht als harte Architekturvoraussetzung behandelt werden, solange die Infra-Pruefung fehlt.
 
-## Lokale Standardroutine
+## Aktuelle Verfügbarkeit auf dem HP
 
-Der lokale Validator läuft standardmäßig als systemd-User-Service:
+Owner-Auskunft im Memory-Review 2026-10-07: Der lokale Self-Confidence-Validator ist auf dem HP aus Ressourcengründen nicht nutzbar. Beim kurzfristigen Check liefen Hermes, Firefox für das Dashboard, zwei bis drei kleinere Anwendungen und die normalen Betriebssystemprozesse. Ein kleines Modell über Llama.App war laut Björn so langsam, dass die Geschwindigkeit beinahe in Minuten pro Token statt Token pro Sekunde beschrieben werden musste. Keine exakten Messwerte oder Modellidentität liegen vor; keine technische Ursachenfeststellung daraus ableiten.
+
+Björn hat das Llama.App-Backend vorerst deaktiviert. Das ist Owner-Auskunft, kein neuer Live-Servicecheck. Keine automatische Reaktivierung oder lokale Validator-Inferenz auf dem HP. Eine Neubewertung benötigt einen separaten Auftrag; ein Ersatz-Node oder Ersatzmodell ist nicht festgelegt. Quellen-/Toolprüfungen fortsetzen, fehlende unabhängige Modellvalidierung offenlegen und zwingende ungeklärte Review-Gates eskalieren statt als bestanden auszugeben.
+
+## Historische lokale Standardroutine
+
+Die frühere Einrichtung dokumentierte folgenden systemd-User-Service; diese Referenz belegt keine aktuelle Verfügbarkeit und ist kein Startauftrag:
 
 ```bash
 systemctl --user status llama-validator.service
@@ -100,4 +106,4 @@ Einsatzregel:
 
 ## Josie-Regel
 
-Wenn ein Modell eine Begruendung liefert, ist diese kein Beweis. Josie muss zwischen Plausibilitaet, Validierung und realer Ausfuehrbarkeit unterscheiden. Bei Self-Confidence-Aufgaben nutzt Josie den lokalen Validator als Review-/Routing-Signal, nicht als absolute Wahrheit.
+Wenn ein Modell eine Begruendung liefert, ist diese kein Beweis. Josie muss zwischen Plausibilitaet, Validierung und realer Ausfuehrbarkeit unterscheiden. Ein freigegebener und verfügbarer Validator liefert ein Review-/Routing-Signal, keine absolute Wahrheit. Der lokale HP-Validator ist derzeit ausgeschlossen; die Architekturplanung bedeutet keine Betriebsfreigabe.

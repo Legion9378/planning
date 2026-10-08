@@ -6,6 +6,8 @@ Diese Datei sammelt den aktuellen Hardware- und Betriebssystemstand. Aeltere Cha
 
 ## Aktuelle Arbeitsgeraete und Nodes
 
+Aktuelle Owner-Bestätigung der Rollen und bedingte Pi-5-Zuweisung: [Hardware-Info KI-Netzwerk](hardware-info-ki-netzwerk.md). Diese kompakte Datei bei Rollenfragen zuerst laden; ältere Angaben hier nicht als neuen Live-Nachweis lesen.
+
 ### HP EliteBook 830 G6
 
 - Aktueller Laptop, auf dem Hermes/Codex betrieben wird.
@@ -18,8 +20,8 @@ Diese Datei sammelt den aktuellen Hardware- und Betriebssystemstand. Aeltere Cha
 ### Pi 4 Webserver
 
 - Rolle: Webserver.
-- Perspektivische Self-Hosted-Dienste: Nextcloud, Gitea und WordPress-basierte Website.
-- Externe Erreichbarkeit/watcion.eu bleibt offen, bis Tailscale Funnel getestet wurde.
+- Owner-Review 2026-10-07: WordPress-basierte Website weiterhin geplant; Gitea kann eventuell wieder auftauchen; Nextcloud nur „vielleicht“, nicht gesetzt. „GTA“ wurde mit Björn ausdrücklich als Gitea geklärt.
+- Öffentliche Erreichbarkeit/`watcion.eu`: bisherige offene Planung, in diesem Review keine neue Festlegung. Der ältere Hinweis auf einen damals ausstehenden Funnel-Test ist historisch, kein aktueller technischer Zustandsnachweis; privaten Dashboard-/Conduit-Zugang davon trennen.
 - Keine KI-Instanz.
 
 ### Zweiter Pi 4 NAS
@@ -27,9 +29,13 @@ Diese Datei sammelt den aktuellen Hardware- und Betriebssystemstand. Aeltere Cha
 - Hostname: `nas-pi`.
 - Admin/User fuer Setup: `nas`.
 - Rolle: NAS, OMV-basiert.
+- Review 2026-10-07: Björn bestätigt `nas-pi` als gebooteten Teil des betreuten Netzwerks; außer der Systemdisk sind noch keine Datenträger angeschlossen. Das ist Owner-Auskunft, kein neuer SSH-/Live-Check.
+- Frühere Installation von OMV8 + OMV-Extras ist im Betriebs-Skill `local-agent-service-operations` dokumentiert; aktuelle Paket-/Dienstversionen vor Eingriffen live prüfen.
+- Josies Auftrag umfasst Einrichtung, Pflege und Wartung als Netzwerk- und Systemadmin. Das ist keine pauschale Freigabe destruktiver Storage-, sicherheitskritischer oder produktionsrelevanter Änderungen.
 - Soll spaeter USB-Festplatten zusammenfassen und fuer bestimmte Aufgaben/Freigaben bereitstellen.
 - Keine aktive KI-Rolle.
 - Passwoerter werden nicht in Planning/KB dokumentiert.
+- Datenplatten, Pools und Freigaben erst nach Anschluss, eindeutiger Datenträgeridentifikation und abgestimmtem Storage-Plan einrichten; die Systemdisk nicht als verfügbare Datenplatte behandeln.
 
 ### RK3588-Rechner
 
@@ -41,7 +47,7 @@ Diese Datei sammelt den aktuellen Hardware- und Betriebssystemstand. Aeltere Cha
 
 ### Pi 5 8 GB
 
-- Rolle: Orchestrator fuer die selbstgebaute Paperclip-Alternative mit eigenem Agentic-Layer und CJ-CEO-Struktur.
+- Frühere Rolle: Orchestrator fuer die selbstgebaute Paperclip-Alternative mit eigenem Agentic-Layer und CJ-CEO-Struktur. Owner-Korrektur 2026-10-07: Wenn CJ als Company erstellt wird, ist die Pi-5-Rolle offen; keine feste Zuweisung daraus ableiten.
 - 8 GB RAM.
 - Kein Modellrunner unter aktueller RAM-Regel.
 

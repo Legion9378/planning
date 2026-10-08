@@ -15,6 +15,8 @@ globaler Counter
 
 Die Laenge ist gesetzt, weil der ID-Raum mit `62^30` praktisch langfristig nicht knapp wird.
 
+Owner-Bestätigung 2026-10-07: Der globale Counter bleibt aktuell und soll später für Josie und CJ verwendet werden. Designvorgabe und technisch geprüfte gemeinsame Implementierung unterscheiden; in diesem Review keine Runtime-/Concurrency-Prüfung durchgeführt.
+
 ## ID-Ebenen
 
 ```text
@@ -84,6 +86,8 @@ Low-Priority-Events erscheinen trotzdem in Statusberichten.
 ## Qwen-Small-Kontext
 
 Die Qwen-Small-Planung aus der Quelle betrifft das spaetere KI-Netzwerk, nicht Josies Laptop.
+
+Herkunftskorrektur 2026-10-07: Die Unterhaltung war mit ChatGPT, nicht mit Josie. Separater erinnerter Kandidat auf einem 32-GB-Node: [Qwen / Bonsai 2](../../llm-wiki/content/notes/qwen-bonsai-2-modellhinweis.md). Bezeichnungen und relative Größen-/Genauigkeitsangaben sind dort als ungeprüfter Owner-Hinweis erhalten, nicht als fester Modell- oder Installationsauftrag.
 
 Historische Rollenplanung:
 
