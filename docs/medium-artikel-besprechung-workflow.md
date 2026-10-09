@@ -1,7 +1,7 @@
 # Medium-Artikel-Besprechung Workflow
 
-Stand: 2026-07-06
-Status: Planungsregel / Tool-Test offen
+Stand: 2026-10-07 (Owner-Review)
+Status: Planungsregel / MarkItDown-Installation und Tool-Test offen
 Quelle: Chat-History `chatgpt-zugriff-auf-medium-artikel-2026-05-07T01-48-24-769Z.md`
 
 ## Ziel
@@ -47,6 +47,8 @@ Ziele:
 ## Bevorzugter Startpfad: MarkItDown
 
 Bjoern hat sich fuer diesen Workflow mental auf **MarkItDown** als bevorzugten Startpfad festgelegt.
+
+Owner-Hinweis im Memory-Review: MarkItDown musste noch installiert werden, damit die Vorbereitung einfacher wird. Installation und ein repraesentativer Konvertierungstest bleiben offen; dies ist Owner-Auskunft, keine neue Live-Paketpruefung oder Freigabe zur Installation. Die Workflow-Praeferenz belegt keine bereits verfuegbare Konvertierungsfaehigkeit.
 
 Gruende:
 

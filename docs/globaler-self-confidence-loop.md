@@ -66,6 +66,8 @@ Diese Modellnamen duerfen nicht als harte Architekturvoraussetzung behandelt wer
 
 ## Aktuelle Verfügbarkeit auf dem HP
 
+Ergänzende Owner-Entscheidung im Review: Durch die Einrichtung der Company ist der separate lokale Validator hinfällig geworden; kein zusätzlicher verpflichtender Prüfschritt mehr. Passende Company-Qualitätsregeln und reale Quellen-/Toolbelege verwenden. Eigene Company-QA ist keine unabhängige Modellprüfung. Keine neue Runtime-Abnahme oder pauschale Aufhebung des Self-Confidence-Architekturziels daraus ableiten.
+
 Owner-Auskunft im Memory-Review 2026-10-07: Der lokale Self-Confidence-Validator ist auf dem HP aus Ressourcengründen nicht nutzbar. Beim kurzfristigen Check liefen Hermes, Firefox für das Dashboard, zwei bis drei kleinere Anwendungen und die normalen Betriebssystemprozesse. Ein kleines Modell über Llama.App war laut Björn so langsam, dass die Geschwindigkeit beinahe in Minuten pro Token statt Token pro Sekunde beschrieben werden musste. Keine exakten Messwerte oder Modellidentität liegen vor; keine technische Ursachenfeststellung daraus ableiten.
 
 Björn hat das Llama.App-Backend vorerst deaktiviert. Das ist Owner-Auskunft, kein neuer Live-Servicecheck. Keine automatische Reaktivierung oder lokale Validator-Inferenz auf dem HP. Eine Neubewertung benötigt einen separaten Auftrag; ein Ersatz-Node oder Ersatzmodell ist nicht festgelegt. Quellen-/Toolprüfungen fortsetzen, fehlende unabhängige Modellvalidierung offenlegen und zwingende ungeklärte Review-Gates eskalieren statt als bestanden auszugeben.
