@@ -1,6 +1,6 @@
 # Image Generation Prompt Field Structure
 
-Stand: 2026-06-27
+Stand: 2026-10-07 (Owner-Review der CPU-Bildworkflow-Praeferenz)
 Quelle: `/home/work/Archiv_entpackt/KI 2/Chathistory/chatgpt-realistische-bildgenerierung-tipps-2026-05-07T02-21-24-633Z.md`
 
 ## Regel
@@ -66,9 +66,15 @@ Keine mehrzeiligen Positive-/Negative-Prompts erzeugen.
 
 ## ComfyUI-CPU
 
-ComfyUI-CPU soll demnaechst installiert werden, weil ComfyUI eine lokale API fuer Josie bereitstellt.
+Owner-Korrektur im Memory-Review: **ComfyUI-CPU ist fuer KI-Bedienung bevorzugt**, weil es mehr Feinabstimmung des Bildworkflows ermoeglicht. Die lokale API ist fuer Josie/Automation wichtig. „Fine Tuning“ wird hier als Workflow-/Parameter-Feinabstimmung festgehalten, nicht als neuer Modelltrainingsauftrag.
 
-Fuer Josie/Automation ist ComfyUI deshalb der bevorzugte Bildworkflow-Pfad, auch wenn CPU-only langsam ist.
+Die fruehere Aussage „demnaechst installieren“ ist keine aktuelle Termin- oder Installationsfreigabe. Zielhost, Modelle, Ressourcen, Installation und API-Bedienung muessen bei einer konkreten Umsetzung geprueft werden; kein aktueller Betriebsnachweis aus dieser Praeferenz.
+
+## FastSDCPU als Alternative
+
+Laut Bjoerns Ergaenzung ist **FastSDCPU ebenfalls eine Moeglichkeit**, weil es im Gegensatz zum bisherigen EasyDiffusion-Pfad einen API-Modus anbietet. ComfyUI-CPU bleibt fuer KI-Bedienung bevorzugt; FastSDCPU ist ein alternativer Kandidat, kein parallel verpflichtend zu installierender Dienst.
+
+Das ist eine Owner-Einordnung, keine neue Hersteller-/Versions- oder API-Pruefung. Vor Nutzung konkrete Version, CPU-/Modellkompatibilitaet, steuerbare Parameter, API-Vertrag, Ressourcenbedarf und reproduzierbaren Generierungsaufruf testen. Die Einordnung des bisherigen EasyDiffusion-Pfads ist keine neu recherchierte pauschale Aussage ueber alle Versionen oder Erweiterungen.
 
 ## Konsistenz statt Pipeline-Zwang
 

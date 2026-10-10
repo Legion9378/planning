@@ -3,6 +3,8 @@
 Stand: 2026-06-27
 Quelle: `chatgpt-risen-kaufberatung-2026-05-07T02-46-51-439Z.md`
 
+Owner-Bestätigung im Memory-Review 2026-10-07: In diesem Bereich wurde noch nicht weiter geplant. Der hier dokumentierte Detailstand bleibt damit der zuletzt festgehaltene Stand; der separate Quellenabgleich bleibt offen. Kein neuer Story-Planungs- oder Archivintake-Auftrag.
+
 Diese Seite haelt die aktuell letzte vorgenommene Detailplanung fuer Bjoerns Multi-Crossover fest. Die Root-Storydatei `Balance Anthology.txt` und weitere `.txt/.epub/.pdf`-Dateien aus `Archiv_entpackt` muessen spaeter separat geprueft werden.
 
 ## Grundstatus
